@@ -428,8 +428,8 @@
     <created_user>-</created_user>
     <created_date>2023/02/08 14:46:49.267</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2023/02/08 14:48:01.954</modified_date>
-    <key_for_session_key/>
+    <modified_date>2023/03/03 13:12:52.524</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
@@ -488,7 +488,7 @@
   <order>
     <hop>
       <from>Table - ${schema}_${version}.who_idsr_synthetic_${version}</from>
-      <to>Table output</to>
+      <to>Table - ${staging}.who_idsr_staging_1</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -1370,7 +1370,7 @@ FROM ${schema}_${version}.who_idsr_synthetic_${version}
     </GUI>
   </step>
   <step>
-    <name>Table output</name>
+    <name>Table - ${staging}.who_idsr_staging_1</name>
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -1381,8 +1381,8 @@ FROM ${schema}_${version}.who_idsr_synthetic_${version}
       <schema_name/>
     </partitioning>
     <connection>IDSR Synthetic</connection>
-    <schema>staging</schema>
-    <table>who_idsr_staging</table>
+    <schema>${staging}</schema>
+    <table>who_idsr_staging_1</table>
     <commit>1000</commit>
     <truncate>Y</truncate>
     <ignore_errors>N</ignore_errors>
