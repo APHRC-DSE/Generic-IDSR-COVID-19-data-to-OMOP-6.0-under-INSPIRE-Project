@@ -7,7 +7,7 @@
   <created_user>-</created_user>
   <created_date>2023/02/08 10:29:00.686</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2023/02/10 16:55:05.100</modified_date>
+  <modified_date>2023/03/03 15:58:10.377</modified_date>
   <parameters>
     </parameters>
   <slaveservers>
@@ -306,7 +306,7 @@
         </field>
         <field>
           <variable_name>cdm_schema</variable_name>
-          <variable_value>omop_6_0</variable_value>
+          <variable_value>omop_6_0_new</variable_value>
           <variable_type>JVM</variable_type>
         </field>
         <field>
@@ -318,7 +318,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>336</xloc>
+      <xloc>288</xloc>
       <yloc>96</yloc>
       <attributes_kjc/>
     </entry>
@@ -377,7 +377,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>576</xloc>
+      <xloc>784</xloc>
       <yloc>96</yloc>
       <attributes_kjc/>
     </entry>
@@ -414,7 +414,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>832</xloc>
+      <xloc>1040</xloc>
       <yloc>96</yloc>
       <attributes_kjc/>
     </entry>
@@ -451,7 +451,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1104</xloc>
+      <xloc>1312</xloc>
       <yloc>96</yloc>
       <attributes_kjc/>
     </entry>
@@ -488,7 +488,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>1104</xloc>
+      <xloc>1312</xloc>
       <yloc>224</yloc>
       <attributes_kjc/>
     </entry>
@@ -525,7 +525,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>832</xloc>
+      <xloc>1040</xloc>
       <yloc>224</yloc>
       <attributes_kjc/>
     </entry>
@@ -562,7 +562,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>576</xloc>
+      <xloc>784</xloc>
       <yloc>224</yloc>
       <attributes_kjc/>
     </entry>
@@ -599,8 +599,97 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>576</xloc>
+      <xloc>512</xloc>
+      <yloc>224</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Success</name>
+      <description/>
+      <type>SUCCESS</type>
+      <attributes/>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>512</xloc>
       <yloc>352</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Populate Staging Table</name>
+      <description/>
+      <type>TRANS</type>
+      <attributes/>
+      <specification_method>rep_name</specification_method>
+      <trans_object_id/>
+      <filename/>
+      <transname>02 Populate Staging Table</transname>
+      <directory>/Misc</directory>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Basic</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
+      <run_configuration>Pentaho local</run_configuration>
+      <suppress_result_data>N</suppress_result_data>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>512</xloc>
+      <yloc>96</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Create Tables</name>
+      <description/>
+      <type>JOB</type>
+      <attributes/>
+      <specification_method>rep_name</specification_method>
+      <job_object_id/>
+      <filename/>
+      <jobname>03 Create Tables</jobname>
+      <directory>/Misc</directory>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Nothing</loglevel>
+      <slave_server_name/>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <expand_remote_job>N</expand_remote_job>
+      <create_parent_folder>N</create_parent_folder>
+      <pass_export>N</pass_export>
+      <run_configuration>Pentaho local</run_configuration>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <set_append_logfile>N</set_append_logfile>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>288</xloc>
+      <yloc>208</yloc>
       <attributes_kjc/>
     </entry>
   </entries>
@@ -613,15 +702,6 @@
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>Set variables</from>
-      <to>01 Demographics</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>N</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
     </hop>
     <hop>
       <from>01 Demographics</from>
@@ -671,6 +751,42 @@
     <hop>
       <from>06 Travel History</from>
       <to>07 Vaccination</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>07 Vaccination</from>
+      <to>Success</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Populate Staging Table</from>
+      <to>01 Demographics</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Set variables</from>
+      <to>Create Tables</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Create Tables</from>
+      <to>Populate Staging Table</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
