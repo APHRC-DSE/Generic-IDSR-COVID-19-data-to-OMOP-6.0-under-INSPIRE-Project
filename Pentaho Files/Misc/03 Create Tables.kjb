@@ -1,0 +1,3492 @@
+<job>
+  <name>03 Create Tables</name>
+  <description/>
+  <extended_description/>
+  <job_version/>
+  <directory>/Misc</directory>
+  <created_user>-</created_user>
+  <created_date>2023/02/22 13:16:12.850</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2023/03/03 15:59:10.312</modified_date>
+  <parameters>
+    </parameters>
+  <connection>
+    <name>IDSR Synthetic</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>IDSR</database>
+    <port>5432</port>
+    <username>postgres</username>
+    <password>Encrypted 2be98afc81ac68197bc16bc748fc0fc8e</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>5432</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <slaveservers>
+    </slaveservers>
+  <job-log-table>
+    <connection/>
+    <schema/>
+    <table/>
+    <size_limit_lines/>
+    <interval/>
+    <timeout_days/>
+    <field>
+      <id>ID_JOB</id>
+      <enabled>Y</enabled>
+      <name>ID_JOB</name>
+    </field>
+    <field>
+      <id>CHANNEL_ID</id>
+      <enabled>Y</enabled>
+      <name>CHANNEL_ID</name>
+    </field>
+    <field>
+      <id>JOBNAME</id>
+      <enabled>Y</enabled>
+      <name>JOBNAME</name>
+    </field>
+    <field>
+      <id>STATUS</id>
+      <enabled>Y</enabled>
+      <name>STATUS</name>
+    </field>
+    <field>
+      <id>LINES_READ</id>
+      <enabled>Y</enabled>
+      <name>LINES_READ</name>
+    </field>
+    <field>
+      <id>LINES_WRITTEN</id>
+      <enabled>Y</enabled>
+      <name>LINES_WRITTEN</name>
+    </field>
+    <field>
+      <id>LINES_UPDATED</id>
+      <enabled>Y</enabled>
+      <name>LINES_UPDATED</name>
+    </field>
+    <field>
+      <id>LINES_INPUT</id>
+      <enabled>Y</enabled>
+      <name>LINES_INPUT</name>
+    </field>
+    <field>
+      <id>LINES_OUTPUT</id>
+      <enabled>Y</enabled>
+      <name>LINES_OUTPUT</name>
+    </field>
+    <field>
+      <id>LINES_REJECTED</id>
+      <enabled>Y</enabled>
+      <name>LINES_REJECTED</name>
+    </field>
+    <field>
+      <id>ERRORS</id>
+      <enabled>Y</enabled>
+      <name>ERRORS</name>
+    </field>
+    <field>
+      <id>STARTDATE</id>
+      <enabled>Y</enabled>
+      <name>STARTDATE</name>
+    </field>
+    <field>
+      <id>ENDDATE</id>
+      <enabled>Y</enabled>
+      <name>ENDDATE</name>
+    </field>
+    <field>
+      <id>LOGDATE</id>
+      <enabled>Y</enabled>
+      <name>LOGDATE</name>
+    </field>
+    <field>
+      <id>DEPDATE</id>
+      <enabled>Y</enabled>
+      <name>DEPDATE</name>
+    </field>
+    <field>
+      <id>REPLAYDATE</id>
+      <enabled>Y</enabled>
+      <name>REPLAYDATE</name>
+    </field>
+    <field>
+      <id>LOG_FIELD</id>
+      <enabled>Y</enabled>
+      <name>LOG_FIELD</name>
+    </field>
+    <field>
+      <id>EXECUTING_SERVER</id>
+      <enabled>N</enabled>
+      <name>EXECUTING_SERVER</name>
+    </field>
+    <field>
+      <id>EXECUTING_USER</id>
+      <enabled>N</enabled>
+      <name>EXECUTING_USER</name>
+    </field>
+    <field>
+      <id>START_JOB_ENTRY</id>
+      <enabled>N</enabled>
+      <name>START_JOB_ENTRY</name>
+    </field>
+    <field>
+      <id>CLIENT</id>
+      <enabled>N</enabled>
+      <name>CLIENT</name>
+    </field>
+  </job-log-table>
+  <jobentry-log-table>
+    <connection/>
+    <schema/>
+    <table/>
+    <timeout_days/>
+    <field>
+      <id>ID_BATCH</id>
+      <enabled>Y</enabled>
+      <name>ID_BATCH</name>
+    </field>
+    <field>
+      <id>CHANNEL_ID</id>
+      <enabled>Y</enabled>
+      <name>CHANNEL_ID</name>
+    </field>
+    <field>
+      <id>LOG_DATE</id>
+      <enabled>Y</enabled>
+      <name>LOG_DATE</name>
+    </field>
+    <field>
+      <id>JOBNAME</id>
+      <enabled>Y</enabled>
+      <name>TRANSNAME</name>
+    </field>
+    <field>
+      <id>JOBENTRYNAME</id>
+      <enabled>Y</enabled>
+      <name>STEPNAME</name>
+    </field>
+    <field>
+      <id>LINES_READ</id>
+      <enabled>Y</enabled>
+      <name>LINES_READ</name>
+    </field>
+    <field>
+      <id>LINES_WRITTEN</id>
+      <enabled>Y</enabled>
+      <name>LINES_WRITTEN</name>
+    </field>
+    <field>
+      <id>LINES_UPDATED</id>
+      <enabled>Y</enabled>
+      <name>LINES_UPDATED</name>
+    </field>
+    <field>
+      <id>LINES_INPUT</id>
+      <enabled>Y</enabled>
+      <name>LINES_INPUT</name>
+    </field>
+    <field>
+      <id>LINES_OUTPUT</id>
+      <enabled>Y</enabled>
+      <name>LINES_OUTPUT</name>
+    </field>
+    <field>
+      <id>LINES_REJECTED</id>
+      <enabled>Y</enabled>
+      <name>LINES_REJECTED</name>
+    </field>
+    <field>
+      <id>ERRORS</id>
+      <enabled>Y</enabled>
+      <name>ERRORS</name>
+    </field>
+    <field>
+      <id>RESULT</id>
+      <enabled>Y</enabled>
+      <name>RESULT</name>
+    </field>
+    <field>
+      <id>NR_RESULT_ROWS</id>
+      <enabled>Y</enabled>
+      <name>NR_RESULT_ROWS</name>
+    </field>
+    <field>
+      <id>NR_RESULT_FILES</id>
+      <enabled>Y</enabled>
+      <name>NR_RESULT_FILES</name>
+    </field>
+    <field>
+      <id>LOG_FIELD</id>
+      <enabled>N</enabled>
+      <name>LOG_FIELD</name>
+    </field>
+    <field>
+      <id>COPY_NR</id>
+      <enabled>N</enabled>
+      <name>COPY_NR</name>
+    </field>
+  </jobentry-log-table>
+  <channel-log-table>
+    <connection/>
+    <schema/>
+    <table/>
+    <timeout_days/>
+    <field>
+      <id>ID_BATCH</id>
+      <enabled>Y</enabled>
+      <name>ID_BATCH</name>
+    </field>
+    <field>
+      <id>CHANNEL_ID</id>
+      <enabled>Y</enabled>
+      <name>CHANNEL_ID</name>
+    </field>
+    <field>
+      <id>LOG_DATE</id>
+      <enabled>Y</enabled>
+      <name>LOG_DATE</name>
+    </field>
+    <field>
+      <id>LOGGING_OBJECT_TYPE</id>
+      <enabled>Y</enabled>
+      <name>LOGGING_OBJECT_TYPE</name>
+    </field>
+    <field>
+      <id>OBJECT_NAME</id>
+      <enabled>Y</enabled>
+      <name>OBJECT_NAME</name>
+    </field>
+    <field>
+      <id>OBJECT_COPY</id>
+      <enabled>Y</enabled>
+      <name>OBJECT_COPY</name>
+    </field>
+    <field>
+      <id>REPOSITORY_DIRECTORY</id>
+      <enabled>Y</enabled>
+      <name>REPOSITORY_DIRECTORY</name>
+    </field>
+    <field>
+      <id>FILENAME</id>
+      <enabled>Y</enabled>
+      <name>FILENAME</name>
+    </field>
+    <field>
+      <id>OBJECT_ID</id>
+      <enabled>Y</enabled>
+      <name>OBJECT_ID</name>
+    </field>
+    <field>
+      <id>OBJECT_REVISION</id>
+      <enabled>Y</enabled>
+      <name>OBJECT_REVISION</name>
+    </field>
+    <field>
+      <id>PARENT_CHANNEL_ID</id>
+      <enabled>Y</enabled>
+      <name>PARENT_CHANNEL_ID</name>
+    </field>
+    <field>
+      <id>ROOT_CHANNEL_ID</id>
+      <enabled>Y</enabled>
+      <name>ROOT_CHANNEL_ID</name>
+    </field>
+  </channel-log-table>
+  <pass_batchid>N</pass_batchid>
+  <shared_objects_file/>
+  <entries>
+    <entry>
+      <name>Start</name>
+      <description/>
+      <type>SPECIAL</type>
+      <attributes/>
+      <start>Y</start>
+      <dummy>N</dummy>
+      <repeat>N</repeat>
+      <schedulerType>0</schedulerType>
+      <intervalSeconds>0</intervalSeconds>
+      <intervalMinutes>60</intervalMinutes>
+      <hour>12</hour>
+      <minutes>0</minutes>
+      <weekDay>1</weekDay>
+      <DayOfMonth>1</DayOfMonth>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>80</xloc>
+      <yloc>80</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Set variables</name>
+      <description/>
+      <type>SET_VARIABLES</type>
+      <attributes/>
+      <replacevars>Y</replacevars>
+      <filename/>
+      <file_variable_type>JVM</file_variable_type>
+      <fields>
+      </fields>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>80</xloc>
+      <yloc>224</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - ${staging}.who_idsr_staging</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>CREATE TABLE IF NOT EXISTS ${staging}.who_idsr_staging
+(
+    recnr bigint,
+    rec_identifier text,
+    report_country character varying(50),
+    report_province character varying(50),
+    report_district character varying(50),
+    report_site character varying(50),
+    diagnosis character varying(50),
+    patient_type character varying(12),
+    date_health_facility date,
+    patient_name character varying(100),
+    patient_dob date,
+    age_years integer,
+    age_months integer,
+    age_days integer,
+    patient_sex character varying(12),
+    patient_residence character varying(50),
+    patient_town_city character varying(50),
+    patient_district character varying(50),
+    patient_area_type character varying(6),
+    patient_address character varying(100),
+    patient_occupation character varying(100),
+    date_onset_symptoms date,
+    travel_history character varying(3),
+    travel_destination character varying(100),
+    vaccine_doses_received integer,
+    date_last_vaccine date,
+    vaccine_name character varying(100),
+    date_specimen_collected date,
+    date_specimen_sent_lab date,
+    lab_result character varying(100),
+    outcome character varying(50),
+    final_classification character varying(50),
+    date_form_sent_district date,
+    date_facility_notified_district date,
+    person_form_complete character varying(50),
+    care_site_id bigint,
+    provider_id bigint,
+    location_id bigint,
+    person_id bigint
+)
+
+TABLESPACE pg_default;
+
+
+CREATE TABLE IF NOT EXISTS ${staging}.who_idsr_staging_1
+(
+    recnr bigint,
+    rec_identifier text,
+    report_country character varying(50),
+    report_province character varying(50),
+    report_district character varying(50),
+    report_site character varying(50),
+    diagnosis character varying(50),
+    patient_type character varying(12),
+    date_health_facility date,
+    patient_name character varying(100),
+    patient_dob date,
+    age_years integer,
+    age_months integer,
+    age_days integer,
+    patient_sex character varying(12),
+    patient_residence character varying(50),
+    patient_town_city character varying(50),
+    patient_district character varying(50),
+    patient_area_type character varying(6),
+    patient_address character varying(100),
+    patient_occupation character varying(100),
+    date_onset_symptoms date,
+    travel_history character varying(3),
+    travel_destination character varying(100),
+    vaccine_doses_received integer,
+    date_last_vaccine date,
+    vaccine_name character varying(100),
+    date_specimen_collected date,
+    date_specimen_sent_lab date,
+    lab_result character varying(100),
+    outcome character varying(50),
+    final_classification character varying(50),
+    date_form_sent_district date,
+    date_facility_notified_district date,
+    person_form_complete character varying(50),
+    care_site_id bigint,
+    provider_id bigint,
+    location_id bigint,
+    person_id bigint
+)
+
+TABLESPACE pg_default;
+
+
+CREATE TABLE IF NOT EXISTS ${staging}.who_idsr_staging_2
+(
+    recnr bigint,
+    rec_identifier text,
+    report_country character varying(50),
+    report_province character varying(50),
+    report_district character varying(50),
+    report_site character varying(50),
+    diagnosis character varying(50),
+    patient_type character varying(12),
+    date_health_facility date,
+    patient_name character varying(100),
+    patient_dob date,
+    age_years integer,
+    age_months integer,
+    age_days integer,
+    patient_sex character varying(12),
+    patient_residence character varying(50),
+    patient_town_city character varying(50),
+    patient_district character varying(50),
+    patient_area_type character varying(6),
+    patient_address character varying(100),
+    patient_occupation character varying(100),
+    date_onset_symptoms date,
+    travel_history character varying(3),
+    travel_destination character varying(100),
+    vaccine_doses_received integer,
+    date_last_vaccine date,
+    vaccine_name character varying(100),
+    date_specimen_collected date,
+    date_specimen_sent_lab date,
+    lab_result character varying(100),
+    outcome character varying(50),
+    final_classification character varying(50),
+    date_form_sent_district date,
+    date_facility_notified_district date,
+    person_form_complete character varying(50),
+    care_site_id bigint,
+    provider_id bigint,
+    location_id bigint,
+    person_id bigint
+)
+
+TABLESPACE pg_default;
+
+
+CREATE TABLE IF NOT EXISTS ${staging}.who_idsr_staging_3
+(
+    recnr bigint,
+    rec_identifier text,
+    report_country character varying(50),
+    report_province character varying(50),
+    report_district character varying(50),
+    report_site character varying(50),
+    diagnosis character varying(50),
+    patient_type character varying(12),
+    date_health_facility date,
+    patient_name character varying(100),
+    patient_dob date,
+    age_years integer,
+    age_months integer,
+    age_days integer,
+    patient_sex character varying(12),
+    patient_residence character varying(50),
+    patient_town_city character varying(50),
+    patient_district character varying(50),
+    patient_area_type character varying(6),
+    patient_address character varying(100),
+    patient_occupation character varying(100),
+    date_onset_symptoms date,
+    travel_history character varying(3),
+    travel_destination character varying(100),
+    vaccine_doses_received integer,
+    date_last_vaccine date,
+    vaccine_name character varying(100),
+    date_specimen_collected date,
+    date_specimen_sent_lab date,
+    lab_result character varying(100),
+    outcome character varying(50),
+    final_classification character varying(50),
+    date_form_sent_district date,
+    date_facility_notified_district date,
+    person_form_complete character varying(50),
+    care_site_id bigint,
+    provider_id bigint,
+    location_id bigint,
+    person_id bigint
+)
+
+TABLESPACE pg_default;
+
+
+CREATE TABLE IF NOT EXISTS ${staging}.who_idsr_staging_4
+(
+    recnr bigint,
+    rec_identifier text,
+    report_country character varying(50),
+    report_province character varying(50),
+    report_district character varying(50),
+    report_site character varying(50),
+    diagnosis character varying(50),
+    patient_type character varying(12),
+    date_health_facility date,
+    patient_name character varying(100),
+    patient_dob date,
+    age_years integer,
+    age_months integer,
+    age_days integer,
+    patient_sex character varying(12),
+    patient_residence character varying(50),
+    patient_town_city character varying(50),
+    patient_district character varying(50),
+    patient_area_type character varying(6),
+    patient_address character varying(100),
+    patient_occupation character varying(100),
+    date_onset_symptoms date,
+    travel_history character varying(3),
+    travel_destination character varying(100),
+    vaccine_doses_received integer,
+    date_last_vaccine date,
+    vaccine_name character varying(100),
+    date_specimen_collected date,
+    date_specimen_sent_lab date,
+    lab_result character varying(100),
+    outcome character varying(50),
+    final_classification character varying(50),
+    date_form_sent_district date,
+    date_facility_notified_district date,
+    person_form_complete character varying(50),
+    care_site_id bigint,
+    provider_id bigint,
+    location_id bigint,
+    person_id bigint
+)
+
+TABLESPACE pg_default;</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>64</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Table Exists - ${cdm_schema}.care_site</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <attributes/>
+      <tablename>care_site</tablename>
+      <schemaname>${cdm_schema}</schemaname>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>208</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - ${cdm_schema}.care_site</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>CREATE TABLE IF NOT EXISTS ${cdm_schema}.care_site
+(
+    care_site_id bigint NOT NULL,
+    care_site_name character varying(255),
+    place_of_service_concept_id integer NOT NULL,
+    location_id bigint,
+    care_site_source_value character varying(50),
+    place_of_service_source_value character varying(50)
+)
+
+TABLESPACE pg_default;
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>T</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>848</xloc>
+      <yloc>208</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Table Exists - ${cdm_schema}.cdm_source</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <attributes/>
+      <tablename>cdm_source</tablename>
+      <schemaname>${cdm_schema}</schemaname>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>336</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - ${cdm_schema}.cdm_source</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>CREATE TABLE IF NOT EXISTS ${cdm_schema}.cdm_source
+(
+    cdm_source_name character varying(255) NOT NULL,
+    cdm_source_abbreviation character varying(25),
+    cdm_holder character varying(255),
+    source_description text,
+    source_documentation_reference character varying(255),
+    cdm_etl_reference character varying(255),
+    source_release_date date NOT NULL,
+    cdm_release_date date NOT NULL,
+    cdm_version character varying(10),
+    vocabulary_version character varying(20) NOT NULL
+)
+
+TABLESPACE pg_default;</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>848</xloc>
+      <yloc>336</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Table Exists - ${cdm_schema}.cohort_definition</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <attributes/>
+      <tablename>cohort_definition</tablename>
+      <schemaname>${cdm_schema}</schemaname>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>464</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - ${cdm_schema}.cohort_definition</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>CREATE TABLE IF NOT EXISTS ${cdm_schema}.cohort_definition
+(
+    cohort_definition_id integer NOT NULL,
+    cohort_definition_name character varying(255) NOT NULL,
+    cohort_definition_description text,
+    definition_type_concept_id integer NOT NULL,
+    cohort_definition_syntax text,
+    subject_concept_id integer NOT NULL,
+    cohort_initiation_date date
+)
+
+TABLESPACE pg_default;</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>848</xloc>
+      <yloc>464</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Table Exists - ${cdm_schema}.concept</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <attributes/>
+      <tablename>concept</tablename>
+      <schemaname>${cdm_schema}</schemaname>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>592</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - ${cdm_schema}.concept</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>CREATE TABLE IF NOT EXISTS ${cdm_schema}.concept
+(
+    concept_id integer NOT NULL,
+    concept_name character varying(255) NOT NULL,
+    domain_id character varying(20) NOT NULL,
+    vocabulary_id character varying(20) NOT NULL,
+    concept_class_id character varying(20) NOT NULL,
+    standard_concept character varying(1),
+    concept_code character varying(50) NOT NULL,
+    valid_start_date date NOT NULL,
+    valid_end_date date NOT NULL,
+    invalid_reason character varying(1)
+)
+
+TABLESPACE pg_default;
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>848</xloc>
+      <yloc>592</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Table Exists - ${cdm_schema}.concept_ancestor</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <attributes/>
+      <tablename>concept_ancestor</tablename>
+      <schemaname>${cdm_schema}</schemaname>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>720</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Table Exists - ${cdm_schema}.concept_class</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <attributes/>
+      <tablename>concept_class</tablename>
+      <schemaname>${cdm_schema}</schemaname>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>848</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - ${cdm_schema}.concept_ancestor</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>CREATE TABLE IF NOT EXISTS ${cdm_schema}.concept_ancestor
+(
+    ancestor_concept_id integer NOT NULL,
+    descendant_concept_id integer NOT NULL,
+    min_levels_of_separation integer NOT NULL,
+    max_levels_of_separation integer NOT NULL
+)
+
+TABLESPACE pg_default;
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>848</xloc>
+      <yloc>720</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - ${cdm_schema}.concept_class</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>CREATE TABLE IF NOT EXISTS ${cdm_schema}.concept_class
+(
+    concept_class_id character varying(20) NOT NULL,
+    concept_class_name character varying(255) NOT NULL,
+    concept_class_concept_id integer NOT NULL
+)
+
+TABLESPACE pg_default;
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>848</xloc>
+      <yloc>848</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Table Exists - ${cdm_schema}.concept_relationship</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <attributes/>
+      <tablename>concept_relationship</tablename>
+      <schemaname>${cdm_schema}</schemaname>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>976</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Table Exists - ${cdm_schema}.concept_synonym</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <attributes/>
+      <tablename>concept_synonym</tablename>
+      <schemaname>${cdm_schema}</schemaname>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>1104</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Table Exists - ${cdm_schema}.condition_era</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <attributes/>
+      <tablename>condition_era</tablename>
+      <schemaname>${cdm_schema}</schemaname>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>1232</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Table Exists - ${cdm_schema}.condition_occurrence</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <attributes/>
+      <tablename>condition_occurrence</tablename>
+      <schemaname>${cdm_schema}</schemaname>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>1360</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Table Exists - ${cdm_schema}.cost</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <attributes/>
+      <tablename>cost</tablename>
+      <schemaname>${cdm_schema}</schemaname>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>1488</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Table Exists - ${cdm_schema}.device_exposure</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <attributes/>
+      <tablename>device_exposure</tablename>
+      <schemaname>${cdm_schema}</schemaname>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>1632</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Table Exists - ${cdm_schema}.domain</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <attributes/>
+      <tablename>domain</tablename>
+      <schemaname>${cdm_schema}</schemaname>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>1776</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Table Exists - ${cdm_schema}.dose_era</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <attributes/>
+      <tablename>dose_era</tablename>
+      <schemaname>${cdm_schema}</schemaname>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>1936</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Table Exists - ${cdm_schema}.drug_era</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <attributes/>
+      <tablename>drug_era</tablename>
+      <schemaname>${cdm_schema}</schemaname>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>2112</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Table Exists - ${cdm_schema}.drug_exposure</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <attributes/>
+      <tablename>drug_exposure</tablename>
+      <schemaname>${cdm_schema}</schemaname>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>2256</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Table Exists - ${cdm_schema}.drug_strength</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <attributes/>
+      <tablename>drug_strength</tablename>
+      <schemaname>${cdm_schema}</schemaname>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>2384</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Table Exists - ${cdm_schema}.fact_relationship</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <attributes/>
+      <tablename>fact_relationship</tablename>
+      <schemaname>${cdm_schema}</schemaname>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>2512</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Table Exists - ${cdm_schema}.location</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <attributes/>
+      <tablename>location</tablename>
+      <schemaname>${cdm_schema}</schemaname>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>2656</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Table Exists - ${cdm_schema}.location_history</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <attributes/>
+      <tablename>location_history</tablename>
+      <schemaname>${cdm_schema}</schemaname>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>2784</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Table Exists - ${cdm_schema}.measurement</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <attributes/>
+      <tablename>measurement</tablename>
+      <schemaname>${cdm_schema}</schemaname>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>2912</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Table Exists - ${cdm_schema}.metadata</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <attributes/>
+      <tablename>metadata</tablename>
+      <schemaname>${cdm_schema}</schemaname>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>3056</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Table Exists - ${cdm_schema}.note</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <attributes/>
+      <tablename>note</tablename>
+      <schemaname>${cdm_schema}</schemaname>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>3216</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Table Exists - ${cdm_schema}.note_nlp</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <attributes/>
+      <tablename>note_nlp</tablename>
+      <schemaname>${cdm_schema}</schemaname>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>3360</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Table Exists - ${cdm_schema}.observation</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <attributes/>
+      <tablename>observation</tablename>
+      <schemaname>${cdm_schema}</schemaname>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>3504</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Table Exists - ${cdm_schema}.observation_period</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <attributes/>
+      <tablename>observation_period</tablename>
+      <schemaname>${cdm_schema}</schemaname>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>3648</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Table Exists - ${cdm_schema}.payer_plan_period</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <attributes/>
+      <tablename>payer_plan_period</tablename>
+      <schemaname>${cdm_schema}</schemaname>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>3808</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Table Exists - ${cdm_schema}.person</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <attributes/>
+      <tablename>person</tablename>
+      <schemaname>${cdm_schema}</schemaname>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>3952</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Table Exists - ${cdm_schema}.procedure_occurrence</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <attributes/>
+      <tablename>procedure_occurrence</tablename>
+      <schemaname>${cdm_schema}</schemaname>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>4080</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Table Exists - ${cdm_schema}.provider</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <attributes/>
+      <tablename>provider</tablename>
+      <schemaname>${cdm_schema}</schemaname>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>4208</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Table Exists - ${cdm_schema}.relationship</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <attributes/>
+      <tablename>relationship</tablename>
+      <schemaname>${cdm_schema}</schemaname>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>4352</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Table Exists - ${cdm_schema}.</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <attributes/>
+      <tablename>source_to_concept_map</tablename>
+      <schemaname>${cdm_schema}</schemaname>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>4496</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Table Exists - ${cdm_schema}.specimen</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <attributes/>
+      <tablename>specimen</tablename>
+      <schemaname>${cdm_schema}</schemaname>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>4640</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Table Exists - ${cdm_schema}.survey_conduct</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <attributes/>
+      <tablename>survey_conduct</tablename>
+      <schemaname>${cdm_schema}</schemaname>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>4784</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Table Exists - ${cdm_schema}.visit_detail</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <attributes/>
+      <tablename>visit_detail</tablename>
+      <schemaname>${cdm_schema}</schemaname>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>4928</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Table Exists - ${cdm_schema}.visit_occurrence</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <attributes/>
+      <tablename>visit_occurrence</tablename>
+      <schemaname>${cdm_schema}</schemaname>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>5072</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Table Exists - ${cdm_schema}.vocabulary</name>
+      <description/>
+      <type>TABLE_EXISTS</type>
+      <attributes/>
+      <tablename>vocabulary</tablename>
+      <schemaname>${cdm_schema}</schemaname>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>5216</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - ${cdm_schema}.concept_relationship</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>CREATE TABLE IF NOT EXISTS ${cdm_schema}.concept_relationship
+(
+    concept_id_1 integer NOT NULL,
+    concept_id_2 integer NOT NULL,
+    relationship_id character varying(20) NOT NULL,
+    valid_start_date date NOT NULL,
+    valid_end_date date NOT NULL,
+    invalid_reason character varying(1)
+)
+
+TABLESPACE pg_default;
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>848</xloc>
+      <yloc>976</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - ${cdm_schema}.concept_synonym</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>CREATE TABLE IF NOT EXISTS ${cdm_schema}.concept_synonym
+(
+    concept_id integer NOT NULL,
+    concept_synonym_name character varying(1000) NOT NULL,
+    language_concept_id integer NOT NULL
+)
+
+TABLESPACE pg_default;
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>848</xloc>
+      <yloc>1104</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - ${cdm_schema}.condition_era</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>CREATE TABLE IF NOT EXISTS ${cdm_schema}.condition_era
+(
+    condition_era_id bigint NOT NULL,
+    person_id bigint NOT NULL,
+    condition_concept_id integer NOT NULL,
+    condition_era_start_date TIMESTAMP WITHOUT TIME ZONE NOT NULL,
+    condition_era_end_date TIMESTAMP WITHOUT TIME ZONE NOT NULL,
+    condition_occurrence_count integer
+)
+
+TABLESPACE pg_default;
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>848</xloc>
+      <yloc>1232</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - ${cdm_schema}.condition_occurrence</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>CREATE TABLE IF NOT EXISTS ${cdm_schema}.condition_occurrence
+(
+    condition_occurrence_id bigint NOT NULL,
+    person_id bigint NOT NULL,
+    condition_concept_id integer NOT NULL,
+    condition_start_date date NOT NULL,
+    condition_start_datetime TIMESTAMP WITHOUT TIME ZONE,
+    condition_end_date date,
+    condition_end_datetime TIMESTAMP WITHOUT TIME ZONE,
+    condition_type_concept_id integer NOT NULL,
+    condition_status_concept_id integer,
+    stop_reason character varying(20),
+    provider_id bigint,
+    visit_occurrence_id bigint,
+    visit_detail_id bigint,
+    condition_source_value character varying(50),
+    condition_source_concept_id integer,
+    condition_status_source_value character varying(50)
+)
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>848</xloc>
+      <yloc>1360</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - ${cdm_schema}.cost</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>CREATE TABLE IF NOT EXISTS ${cdm_schema}.cost
+(
+    cost_id bigint NOT NULL,
+    person_id bigint NOT NULL,
+    cost_event_id bigint NOT NULL,
+    cost_event_field_concept_id integer NOT NULL,
+    cost_concept_id integer NOT NULL,
+    cost_type_concept_id integer,
+    cost_source_concept_id integer,
+    cost_source_value character varying(50),
+    currency_concept_id integer,
+    cost numeric,
+    incurred_date date,
+    billed_date date,
+    paid_date date,
+    revenue_code_concept_id integer,
+    drg_concept_id integer,
+    revenue_code_source_value character varying(50),
+    drg_source_value character varying(50),
+    payer_plan_period_id bigint
+)
+
+TABLESPACE pg_default;
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>848</xloc>
+      <yloc>1488</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - ${cdm_schema}.device_exposure</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>CREATE TABLE IF NOT EXISTS ${cdm_schema}.device_exposure
+(
+    device_exposure_id bigint NOT NULL,
+    person_id bigint NOT NULL,
+    device_concept_id integer NOT NULL,
+    device_exposure_start_date date NOT NULL,
+    device_exposure_start_timestamp TIMESTAMP WITHOUT TIME ZONE,
+    device_exposure_end_date date,
+    device_exposure_end_timestamp TIMESTAMP WITHOUT TIME ZONE,
+    device_type_concept_id integer NOT NULL,
+    unique_device_id character varying(50),
+    quantity integer,
+    provider_id integer,
+    visit_occurrence_id bigint,
+    visit_detail_id bigint,
+    device_source_value character varying(50),
+    device_source_concept_id integer
+)
+
+TABLESPACE pg_default;</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>848</xloc>
+      <yloc>1632</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - ${cdm_schema}.domain</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>CREATE TABLE IF NOT EXISTS ${cdm_schema}.domain
+(
+    domain_id character varying(20) NOT NULL,
+    domain_name character varying(255) NOT NULL,
+    domain_concept_id integer NOT NULL
+)
+
+TABLESPACE pg_default;
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>848</xloc>
+      <yloc>1776</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - ${cdm_schema}.dose_era</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>CREATE TABLE IF NOT EXISTS ${cdm_schema}.dose_era
+(
+    dose_era_id bigint NOT NULL,
+    person_id bigint NOT NULL,
+    drug_concept_id integer NOT NULL,
+    unit_concept_id integer NOT NULL,
+    dose_value numeric NOT NULL,
+    dose_era_start_datetime TIMESTAMP WITHOUT TIME ZONE NOT NULL,
+    dose_era_end_datetime TIMESTAMP WITHOUT TIME ZONE NOT NULL
+)
+
+TABLESPACE pg_default;
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>848</xloc>
+      <yloc>1936</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - ${cdm_schema}.drug_era</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>CREATE TABLE IF NOT EXISTS ${cdm_schema}.drug_era
+(
+    drug_era_id bigint NOT NULL,
+    person_id bigint NOT NULL,
+    drug_concept_id integer NOT NULL,
+    drug_era_start_datetime TIMESTAMP WITHOUT TIME ZONE NOT NULL,
+    drug_era_end_datetime TIMESTAMP WITHOUT TIME ZONE NOT NULL,
+    drug_exposure_count integer,
+    gap_days integer
+)
+
+TABLESPACE pg_default;
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>848</xloc>
+      <yloc>2112</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - ${cdm_schema}.drug_exposure</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>CREATE TABLE IF NOT EXISTS ${cdm_schema}.drug_exposure
+(
+    drug_exposure_id bigint NOT NULL,
+    person_id bigint NOT NULL,
+    drug_concept_id integer NOT NULL,
+    drug_exposure_start_date date NOT NULL,
+    drug_exposure_start_datetime TIMESTAMP WITHOUT TIME ZONE,
+    drug_exposure_end_date date NOT NULL,
+    drug_exposure_end_datetime TIMESTAMP WITHOUT TIME ZONE,
+    verbatim_end_date date,
+    drug_type_concept_id integer NOT NULL,
+    stop_reason character varying(20),
+    refills integer,
+    quantity double precision,
+    days_supply integer,
+    sig text,
+    route_concept_id integer,
+    lot_number character varying(50),
+    provider_id bigint,
+    visit_occurrence_id bigint,
+    visit_detail_id bigint,
+    drug_source_value character varying(50),
+    drug_source_concept_id integer,
+    route_source_value character varying(50),
+    dose_unit_source_value character varying(50)
+)
+
+TABLESPACE pg_default;
+
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>848</xloc>
+      <yloc>2256</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - ${cdm_schema}.drug_strength</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>CREATE TABLE IF NOT EXISTS ${cdm_schema}.drug_strength
+(
+    drug_concept_id integer NOT NULL,
+    ingredient_concept_id integer NOT NULL,
+    amount_value numeric,
+    amount_unit_concept_id integer,
+    numerator_value numeric,
+    numerator_unit_concept_id integer,
+    denominator_value numeric,
+    denominator_unit_concept_id integer,
+    box_size integer,
+    valid_start_date date NOT NULL,
+    valid_end_date date NOT NULL,
+    invalid_reason character varying(1)
+)
+
+TABLESPACE pg_default;
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>848</xloc>
+      <yloc>2384</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - ${cdm_schema}.fact_relationship</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>CREATE TABLE IF NOT EXISTS ${cdm_schema}.fact_relationship
+(
+    domain_concept_id_1 integer NOT NULL,
+    fact_id_1 bigint NOT NULL,
+    domain_concept_id_2 integer NOT NULL,
+    fact_id_2 bigint NOT NULL,
+    relationship_concept_id integer NOT NULL
+)
+
+TABLESPACE pg_default;
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>848</xloc>
+      <yloc>2512</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - ${cdm_schema}.location</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>CREATE TABLE IF NOT EXISTS ${cdm_schema}.location
+(
+    location_id bigint NOT NULL,
+    address_1 character varying(50),
+    address_2 character varying(50),
+    city character varying(50),
+    state character varying(2),
+    zip character varying(9),
+    county character varying(20),
+    location_source_value character varying(50),
+    latitude numeric,
+    longitude numeric
+)
+
+TABLESPACE pg_default;
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>848</xloc>
+      <yloc>2656</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - ${cdm_schema}.location_history</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>CREATE TABLE IF NOT EXISTS ${cdm_schema}.location_history
+(
+    location_id bigint NOT NULL,
+    relationship_type_concept_id integer NOT NULL,
+    domain_id character varying(50)NOT NULL,
+    entity_id bigint NOT NULL,
+    start_date date NOT NULL,
+    end_date date NOT NULL
+)
+
+TABLESPACE pg_default;
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>848</xloc>
+      <yloc>2784</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - ${cdm_schema}.measurement</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>CREATE TABLE IF NOT EXISTS ${cdm_schema}.measurement
+(
+    measurement_id bigint NOT NULL,
+    person_id bigint NOT NULL,
+    measurement_concept_id integer NOT NULL,
+    measurement_date date NOT NULL,
+    measurement_datetime timestamp without time zone,
+    measurement_time character varying(10),
+    measurement_type_concept_id integer NOT NULL,
+    operator_concept_id integer,
+    value_as_number numeric,
+    value_as_concept_id integer,
+    unit_concept_id integer,
+    range_low numeric,
+    range_high numeric,
+    provider_id bigint,
+    visit_occurrence_id bigint,
+    visit_detail_id bigint,
+    measurement_source_value character varying(50),
+    measurement_source_concept_id integer,
+    unit_source_value character varying(50),
+    unit_source_concept_id integer,
+    value_source_value character varying(50)
+)
+
+TABLESPACE pg_default;
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>848</xloc>
+      <yloc>2912</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - ${cdm_schema}.metadata</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>CREATE TABLE IF NOT EXISTS ${cdm_schema}.metadata
+(
+    metadata_concept_id integer NOT NULL,
+    metadata_type_concept_id integer NOT NULL,
+    name character varying(250) NOT NULL,
+    value_as_string character varying(250),
+    value_as_concept_id integer,
+    metadata_date date,
+    metadata_timestamp TIMESTAMP WITHOUT TIME ZONE
+)
+
+TABLESPACE pg_default;
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>848</xloc>
+      <yloc>3056</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - ${cdm_schema}.note</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>CREATE TABLE IF NOT EXISTS ${cdm_schema}.note
+(
+    note_id integer NOT NULL,
+    person_id bigint NOT NULL,
+    note_event_id bigint,
+    note_event_field_concept_id integer,
+    note_date date NOT NULL,
+    note_timestamp TIMESTAMP WITHOUT TIME ZONE,
+    note_type_concept_id integer NOT NULL,
+    note_class_concept_id integer NOT NULL,
+    note_title character varying(250),
+    note_text text NOT NULL,
+    encoding_concept_id integer NOT NULL,
+    language_concept_id integer NOT NULL,
+    provider_id bigint,
+    visit_occurrence_id bigint,
+    visit_detail_id bigint,
+    note_source_value character varying(50)
+)
+
+TABLESPACE pg_default;
+
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>848</xloc>
+      <yloc>3216</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - ${cdm_schema}.note_nlp</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>CREATE TABLE IF NOT EXISTS ${cdm_schema}.note_nlp
+(
+    note_nlp_id bigint NOT NULL,
+    note_id integer NOT NULL,
+    section_concept_id integer,
+    snippet character varying(250),
+    "offset" character varying(50),
+    lexical_variant character varying(250)NOT NULL,
+    note_nlp_concept_id integer,
+    note_nlp_source_concept_id integer,
+    nlp_system character varying(250),
+    nlp_date date NOT NULL,
+    nlp_timestamp timestamp without time zone,
+    term_exists character varying(1),
+    term_temporal character varying(50),
+    term_modifiers character varying(2000)
+)
+
+TABLESPACE pg_default;
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>848</xloc>
+      <yloc>3360</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - ${cdm_schema}.observation</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>CREATE TABLE IF NOT EXISTS ${cdm_schema}.observation
+(
+    observation_id bigint NOT NULL,
+    person_id bigint NOT NULL,
+    observation_concept_id integer NOT NULL,
+    observation_date date NOT NULL,
+    observation_datetime TIMESTAMP WITHOUT TIME ZONE NOT NULL,
+    observation_type_concept_id integer NOT NULL,
+    value_as_number numeric,
+    value_as_string character varying(60),
+    value_as_concept_id integer,
+    qualifier_concept_id integer,
+    unit_concept_id integer,
+    provider_id bigint,
+    visit_occurrence_id bigint,
+    visit_detail_id bigint,
+    observation_source_value character varying(50),
+    observation_source_concept_id integer NOT NULL,
+    unit_source_value character varying(50),
+    qualifier_source_value character varying(50),
+    observation_event_id bigint,
+    obs_event_field_concept_id integer,
+    value_as_datetime TIMESTAMP WITHOUT TIME ZONE
+)
+
+TABLESPACE pg_default;
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>848</xloc>
+      <yloc>3488</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - ${cdm_schema}.observation_period</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>CREATE TABLE IF NOT EXISTS ${cdm_schema}.observation_period
+(
+    observation_period_id bigint NOT NULL,
+    person_id bigint NOT NULL,
+    observation_period_start_date date NOT NULL,
+    observation_period_end_date date NOT NULL,
+    period_type_concept_id integer NOT NULL
+)
+
+TABLESPACE pg_default
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>848</xloc>
+      <yloc>3648</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - ${cdm_schema}.payer_plan_period</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>CREATE TABLE IF NOT EXISTS ${cdm_schema}.payer_plan_period
+(
+    payer_plan_period_id bigint NOT NULL,
+    person_id bigint NOT NULL,
+    contract_person_id bigint,
+    payer_plan_period_start_date date NOT NULL,
+    payer_plan_period_end_date date NOT NULL,
+    payer_concept_id integer NOT NULL,
+    payer_source_value character varying(50),
+    payer_source_concept_id integer NOT NULL,
+    plan_concept_id integer NOT NULL,
+    plan_source_value character varying(50),
+    plan_source_concept_id integer NOT NULL,
+    contract_concept_id integer NOT NULL,
+    contract_source_value character varying(50) NOT NULL,
+    contract_source_concept_id integer NOT NULL,
+    sponsor_concept_id integer NOT NULL,
+    sponsor_source_value character varying(50),
+    sponsor_source_concept_id integer,
+    family_source_value character varying(50),
+    stop_reason_concept_id integer,
+    stop_reason_source_value character varying(50),
+    stop_reason_source_concept_id integer
+)
+
+TABLESPACE pg_default;
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>848</xloc>
+      <yloc>3808</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - ${cdm_schema}.person</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>CREATE TABLE IF NOT EXISTS ${cdm_schema}.person
+(
+    person_id bigint NOT NULL,
+    gender_concept_id integer NOT NULL,
+    year_of_birth integer NOT NULL,
+    month_of_birth integer,
+    day_of_birth integer,
+    birth_datetime TIMESTAMP WITHOUT TIME ZONE NOT NULL,
+    death_datetime TIMESTAMP WITHOUT TIME ZONE,
+    race_concept_id integer NOT NULL,
+    ethnicity_concept_id integer NOT NULL,
+    location_id bigint,
+    provider_id bigint,
+    care_site_id bigint,
+    person_source_value character varying(50),
+    gender_source_value character varying(50),
+    gender_source_concept_id integer NOT NULL,
+    race_source_value character varying(50),
+    race_source_concept_id integer,
+    ethnicity_source_value character varying(50),
+    ethnicity_source_concept_id integer NOT NULL
+)
+
+TABLESPACE pg_default;
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>848</xloc>
+      <yloc>3952</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - ${cdm_schema}.procedure_occurrence</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>CREATE TABLE IF NOT EXISTS ${cdm_schema}.procedure_occurrence
+(
+    procedure_occurrence_id bigint NOT NULL,
+    person_id bigint NOT NULL,
+    procedure_concept_id integer NOT NULL,
+    procedure_date date,
+    procedure_timestamp TIMESTAMP WITHOUT TIME ZONE NOT NULL,
+    procedure_type_concept_id integer NOT NULL,
+    modifier_concept_id integer,
+    quantity integer,
+    provider_id bigint,
+    visit_occurrence_id bigint,
+    visit_detail_id bigint,
+    procedure_source_value character varying(50),
+    procedure_source_concept_id integer NOT NULL,
+    modifier_source_value character varying(50)
+)
+
+TABLESPACE pg_default;
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>848</xloc>
+      <yloc>4080</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - ${cdm_schema}.provider</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>CREATE TABLE IF NOT EXISTS ${cdm_schema}.provider
+(
+    provider_id bigint NOT NULL,
+    provider_name character varying(255),
+    npi character varying(20),
+    dea character varying(20),
+    specialty_concept_id integer NOT NULL,
+    care_site_id bigint,
+    year_of_birth integer,
+    gender_concept_id integer NOT NULL,
+    provider_source_value character varying(50),
+    specialty_source_value character varying(50),
+    specialty_source_concept_id integer NOT NULL,
+    gender_source_value character varying(50),
+    gender_source_concept_id integer NOT NULL
+)
+
+TABLESPACE pg_default;
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>848</xloc>
+      <yloc>4208</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - ${cdm_schema}.relationship</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>CREATE TABLE IF NOT EXISTS ${cdm_schema}.relationship
+(
+    relationship_id character varying(20) NOT NULL,
+    relationship_name character varying(255) NOT NULL,
+    is_hierarchical character varying(1) NOT NULL,
+    defines_ancestry character varying(1) NOT NULL,
+    reverse_relationship_id character varying(20) NOT NULL,
+    relationship_concept_id integer NOT NULL
+)
+
+TABLESPACE pg_default;
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>848</xloc>
+      <yloc>4352</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - ${cdm_schema}.source_to_concept_map</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>CREATE TABLE IF NOT EXISTS ${cdm_schema}.source_to_concept_map
+(
+    source_code character varying(50) NOT NULL,
+    source_concept_id integer NOT NULL,
+    source_vocabulary_id character varying(20) NOT NULL,
+    source_code_description character varying(255),
+    target_concept_id integer NOT NULL,
+    target_vocabulary_id character varying(20) NOT NULL,
+    valid_start_date date NOT NULL,
+    valid_end_date date NOT NULL,
+    invalid_reason character varying(1)
+)
+
+TABLESPACE pg_default;
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>848</xloc>
+      <yloc>4496</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - ${cdm_schema}.specimen</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>CREATE TABLE IF NOT EXISTS ${cdm_schema}.specimen
+(
+    specimen_id bigint NOT NULL,
+    person_id bigint NOT NULL,
+    specimen_concept_id integer NOT NULL,
+    specimen_type_concept_id integer NOT NULL,
+    specimen_date date NOT NULL,
+    specimen_datetime TIMESTAMP WITHOUT TIME ZONE,
+    quantity numeric,
+    unit_concept_id integer,
+    anatomic_site_concept_id integer,
+    disease_status_concept_id integer,
+    specimen_source_id character varying(50),
+    specimen_source_value character varying(50),
+    unit_source_value character varying(50),
+    anatomic_site_source_value character varying(50),
+    disease_status_source_value character varying(50)
+)
+
+TABLESPACE pg_default;
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>848</xloc>
+      <yloc>4640</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - ${cdm_schema}.survey_conduct</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>CREATE TABLE IF NOT EXISTS ${cdm_schema}.survey_conduct
+(
+    survey_conduct_id bigint NOT NULL,
+    person_id bigint NOT NULL,
+    survey_concept_id integer NOT NULL,
+    survey_start_date date,
+    survey_start_timestamp TIMESTAMP WITHOUT TIME ZONE,
+    survey_end_date date,
+    survey_end_timestamp TIMESTAMP WITHOUT TIME ZONE,
+    provider_id bigint,
+    assisted_concept_id integer NOT NULL,
+    respondent_type_concept_id integer NOT NULL,
+    timing_concept_id integer NOT NULL,
+    collection_method_concept_id integer NOT NULL,
+    assisted_source_value character varying(50),
+    respondent_type_source_value character varying(100),
+    timing_source_value character varying(100),
+    collection_method_source_value character varying(100),
+    survey_source_value character varying(100),
+    survey_source_concept_id integer NOT NULL,
+    survey_source_identifier character varying(100),
+    validated_survey_concept_id integer NOT NULL,
+    survey_version_number character varying(20),
+    visit_occurrence_id bigint,
+    response_visit_occurrence_id bigint
+)
+
+TABLESPACE pg_default;
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>848</xloc>
+      <yloc>4784</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - ${cdm_schema}.visit_detail</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>CREATE TABLE IF NOT EXISTS ${cdm_schema}.visit_detail
+(
+    visit_detail_id integer NOT NULL,
+    person_id integer NOT NULL,
+    visit_detail_concept_id integer NOT NULL,
+    visit_detail_start_date date NOT NULL,
+    visit_detail_start_datetime TIMESTAMP WITHOUT TIME ZONE,
+    visit_detail_end_date date NOT NULL,
+    visit_detail_end_datetime TIMESTAMP WITHOUT TIME ZONE,
+    visit_detail_type_concept_id integer NOT NULL,
+    provider_id integer,
+    care_site_id integer,
+    visit_detail_source_value character varying(50),
+    visit_detail_source_concept_id integer,
+    admitted_from_concept_id integer,
+    admitted_from_source_value character varying(50),
+    discharge_to_source_value character varying(50),
+    discharge_to_concept_id integer,
+    preceding_visit_detail_id integer,
+    visit_detail_parent_id integer,
+    visit_occurrence_id integer NOT NULL
+)
+
+TABLESPACE pg_default;
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>848</xloc>
+      <yloc>4928</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - ${cdm_schema}.visit_occurrence</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>CREATE TABLE IF NOT EXISTS ${cdm_schema}.visit_occurrence
+(
+    visit_occurrence_id bigint NOT NULL,
+    person_id bigint NOT NULL,
+    visit_concept_id integer NOT NULL,
+    visit_start_date date,
+    visit_start_datetime TIMESTAMP WITHOUT TIME ZONE NOT NULL,
+    visit_end_date date,
+    visit_end_datetime TIMESTAMP WITHOUT TIME ZONE NOT NULL,
+    visit_type_concept_id integer NOT NULL,
+    provider_id bigint NOT NULL,
+    care_site_id bigint,
+    visit_source_value character varying(50),
+    visit_source_concept_id integer NOT NULL,
+    admitted_from_concept_id integer NOT NULL,
+    admitted_from_source_value character varying(50),
+    discharge_to_concept_id integer NOT NULL,
+    discharge_to_source_value character varying(50),
+    preceding_visit_occurrence_id bigint
+)
+
+TABLESPACE pg_default;
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>848</xloc>
+      <yloc>5072</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - ${cdm_schema}.vocabulary</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>CREATE TABLE IF NOT EXISTS ${cdm_schema}.vocabulary
+(
+    vocabulary_id character varying(20) NOT NULL,
+    vocabulary_name character varying(255) NOT NULL,
+    vocabulary_reference character varying(255),
+    vocabulary_version character varying(255),
+    vocabulary_concept_id integer NOT NULL
+)
+
+TABLESPACE pg_default;
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>848</xloc>
+      <yloc>5216</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Success</name>
+      <description/>
+      <type>SUCCESS</type>
+      <attributes/>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>5328</yloc>
+      <attributes_kjc/>
+    </entry>
+  </entries>
+  <hops>
+    <hop>
+      <from>Start</from>
+      <to>Set variables</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.care_site</from>
+      <to>Table Exists - ${cdm_schema}.cdm_source</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.care_site</from>
+      <to>SQL - ${cdm_schema}.care_site</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.cdm_source</from>
+      <to>Table Exists - ${cdm_schema}.cohort_definition</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.cdm_source</from>
+      <to>SQL - ${cdm_schema}.cdm_source</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.cohort_definition</from>
+      <to>Table Exists - ${cdm_schema}.concept</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.cohort_definition</from>
+      <to>SQL - ${cdm_schema}.cohort_definition</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.concept</from>
+      <to>Table Exists - ${cdm_schema}.concept_ancestor</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.concept</from>
+      <to>SQL - ${cdm_schema}.concept</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.concept_ancestor</from>
+      <to>Table Exists - ${cdm_schema}.concept_class</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.concept_ancestor</from>
+      <to>SQL - ${cdm_schema}.concept_ancestor</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - ${cdm_schema}.care_site</from>
+      <to>Table Exists - ${cdm_schema}.cdm_source</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - ${cdm_schema}.cdm_source</from>
+      <to>Table Exists - ${cdm_schema}.cohort_definition</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - ${cdm_schema}.cohort_definition</from>
+      <to>Table Exists - ${cdm_schema}.concept</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - ${cdm_schema}.concept</from>
+      <to>Table Exists - ${cdm_schema}.concept_ancestor</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - ${cdm_schema}.concept_ancestor</from>
+      <to>Table Exists - ${cdm_schema}.concept_class</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.concept_class</from>
+      <to>Table Exists - ${cdm_schema}.concept_relationship</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.concept_class</from>
+      <to>SQL - ${cdm_schema}.concept_class</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - ${cdm_schema}.concept_class</from>
+      <to>Table Exists - ${cdm_schema}.concept_relationship</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.concept_relationship</from>
+      <to>Table Exists - ${cdm_schema}.concept_synonym</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.concept_synonym</from>
+      <to>Table Exists - ${cdm_schema}.condition_era</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.condition_era</from>
+      <to>Table Exists - ${cdm_schema}.condition_occurrence</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.condition_occurrence</from>
+      <to>Table Exists - ${cdm_schema}.cost</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.cost</from>
+      <to>Table Exists - ${cdm_schema}.device_exposure</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.device_exposure</from>
+      <to>Table Exists - ${cdm_schema}.domain</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.domain</from>
+      <to>Table Exists - ${cdm_schema}.dose_era</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.dose_era</from>
+      <to>Table Exists - ${cdm_schema}.drug_era</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.drug_era</from>
+      <to>Table Exists - ${cdm_schema}.drug_exposure</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.drug_exposure</from>
+      <to>Table Exists - ${cdm_schema}.drug_strength</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.drug_strength</from>
+      <to>Table Exists - ${cdm_schema}.fact_relationship</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.fact_relationship</from>
+      <to>Table Exists - ${cdm_schema}.location</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.location</from>
+      <to>Table Exists - ${cdm_schema}.location_history</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.location_history</from>
+      <to>Table Exists - ${cdm_schema}.measurement</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.measurement</from>
+      <to>Table Exists - ${cdm_schema}.metadata</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.metadata</from>
+      <to>Table Exists - ${cdm_schema}.note</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.note</from>
+      <to>Table Exists - ${cdm_schema}.note_nlp</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.note_nlp</from>
+      <to>Table Exists - ${cdm_schema}.observation</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.observation</from>
+      <to>Table Exists - ${cdm_schema}.observation_period</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.observation_period</from>
+      <to>Table Exists - ${cdm_schema}.payer_plan_period</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.payer_plan_period</from>
+      <to>Table Exists - ${cdm_schema}.person</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.person</from>
+      <to>Table Exists - ${cdm_schema}.procedure_occurrence</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.procedure_occurrence</from>
+      <to>Table Exists - ${cdm_schema}.provider</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.provider</from>
+      <to>Table Exists - ${cdm_schema}.relationship</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.relationship</from>
+      <to>Table Exists - ${cdm_schema}.</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.</from>
+      <to>Table Exists - ${cdm_schema}.specimen</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.specimen</from>
+      <to>Table Exists - ${cdm_schema}.survey_conduct</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.survey_conduct</from>
+      <to>Table Exists - ${cdm_schema}.visit_detail</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.visit_detail</from>
+      <to>Table Exists - ${cdm_schema}.visit_occurrence</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.visit_occurrence</from>
+      <to>Table Exists - ${cdm_schema}.vocabulary</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.concept_relationship</from>
+      <to>SQL - ${cdm_schema}.concept_relationship</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - ${cdm_schema}.concept_relationship</from>
+      <to>Table Exists - ${cdm_schema}.concept_synonym</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.concept_synonym</from>
+      <to>SQL - ${cdm_schema}.concept_synonym</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - ${cdm_schema}.concept_synonym</from>
+      <to>Table Exists - ${cdm_schema}.condition_era</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.condition_era</from>
+      <to>SQL - ${cdm_schema}.condition_era</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - ${cdm_schema}.condition_era</from>
+      <to>Table Exists - ${cdm_schema}.condition_occurrence</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.condition_occurrence</from>
+      <to>SQL - ${cdm_schema}.condition_occurrence</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - ${cdm_schema}.condition_occurrence</from>
+      <to>Table Exists - ${cdm_schema}.cost</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.cost</from>
+      <to>SQL - ${cdm_schema}.cost</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - ${cdm_schema}.cost</from>
+      <to>Table Exists - ${cdm_schema}.device_exposure</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.device_exposure</from>
+      <to>SQL - ${cdm_schema}.device_exposure</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - ${cdm_schema}.device_exposure</from>
+      <to>Table Exists - ${cdm_schema}.domain</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.domain</from>
+      <to>SQL - ${cdm_schema}.domain</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - ${cdm_schema}.domain</from>
+      <to>Table Exists - ${cdm_schema}.dose_era</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.dose_era</from>
+      <to>SQL - ${cdm_schema}.dose_era</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - ${cdm_schema}.dose_era</from>
+      <to>Table Exists - ${cdm_schema}.drug_era</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.drug_era</from>
+      <to>SQL - ${cdm_schema}.drug_era</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - ${cdm_schema}.drug_era</from>
+      <to>Table Exists - ${cdm_schema}.drug_exposure</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.drug_exposure</from>
+      <to>SQL - ${cdm_schema}.drug_exposure</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - ${cdm_schema}.drug_exposure</from>
+      <to>Table Exists - ${cdm_schema}.drug_strength</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.drug_strength</from>
+      <to>SQL - ${cdm_schema}.drug_strength</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - ${cdm_schema}.drug_strength</from>
+      <to>Table Exists - ${cdm_schema}.fact_relationship</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.fact_relationship</from>
+      <to>SQL - ${cdm_schema}.fact_relationship</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - ${cdm_schema}.fact_relationship</from>
+      <to>Table Exists - ${cdm_schema}.location</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.location</from>
+      <to>SQL - ${cdm_schema}.location</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.location_history</from>
+      <to>SQL - ${cdm_schema}.location_history</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - ${cdm_schema}.location_history</from>
+      <to>Table Exists - ${cdm_schema}.measurement</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.measurement</from>
+      <to>SQL - ${cdm_schema}.measurement</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - ${cdm_schema}.measurement</from>
+      <to>Table Exists - ${cdm_schema}.metadata</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.metadata</from>
+      <to>SQL - ${cdm_schema}.metadata</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - ${cdm_schema}.metadata</from>
+      <to>Table Exists - ${cdm_schema}.note</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.note</from>
+      <to>SQL - ${cdm_schema}.note</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - ${cdm_schema}.note</from>
+      <to>Table Exists - ${cdm_schema}.note_nlp</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.note_nlp</from>
+      <to>SQL - ${cdm_schema}.note_nlp</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - ${cdm_schema}.note_nlp</from>
+      <to>Table Exists - ${cdm_schema}.observation</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.observation</from>
+      <to>SQL - ${cdm_schema}.observation</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - ${cdm_schema}.observation</from>
+      <to>Table Exists - ${cdm_schema}.observation_period</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.observation_period</from>
+      <to>SQL - ${cdm_schema}.observation_period</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.payer_plan_period</from>
+      <to>SQL - ${cdm_schema}.payer_plan_period</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - ${cdm_schema}.payer_plan_period</from>
+      <to>Table Exists - ${cdm_schema}.person</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.person</from>
+      <to>SQL - ${cdm_schema}.person</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - ${cdm_schema}.person</from>
+      <to>Table Exists - ${cdm_schema}.procedure_occurrence</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.procedure_occurrence</from>
+      <to>SQL - ${cdm_schema}.procedure_occurrence</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - ${cdm_schema}.procedure_occurrence</from>
+      <to>Table Exists - ${cdm_schema}.provider</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.provider</from>
+      <to>SQL - ${cdm_schema}.provider</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - ${cdm_schema}.provider</from>
+      <to>Table Exists - ${cdm_schema}.relationship</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.relationship</from>
+      <to>SQL - ${cdm_schema}.relationship</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - ${cdm_schema}.relationship</from>
+      <to>Table Exists - ${cdm_schema}.</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.</from>
+      <to>SQL - ${cdm_schema}.source_to_concept_map</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - ${cdm_schema}.source_to_concept_map</from>
+      <to>Table Exists - ${cdm_schema}.specimen</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.specimen</from>
+      <to>SQL - ${cdm_schema}.specimen</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - ${cdm_schema}.specimen</from>
+      <to>Table Exists - ${cdm_schema}.survey_conduct</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.survey_conduct</from>
+      <to>SQL - ${cdm_schema}.survey_conduct</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - ${cdm_schema}.survey_conduct</from>
+      <to>Table Exists - ${cdm_schema}.visit_detail</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.visit_detail</from>
+      <to>SQL - ${cdm_schema}.visit_detail</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - ${cdm_schema}.visit_detail</from>
+      <to>Table Exists - ${cdm_schema}.visit_occurrence</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.visit_occurrence</from>
+      <to>SQL - ${cdm_schema}.visit_occurrence</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - ${cdm_schema}.visit_occurrence</from>
+      <to>Table Exists - ${cdm_schema}.vocabulary</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.vocabulary</from>
+      <to>Success</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Table Exists - ${cdm_schema}.vocabulary</from>
+      <to>SQL - ${cdm_schema}.vocabulary</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - ${cdm_schema}.vocabulary</from>
+      <to>Success</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - ${cdm_schema}.location</from>
+      <to>Table Exists - ${cdm_schema}.location_history</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - ${cdm_schema}.observation_period</from>
+      <to>Table Exists - ${cdm_schema}.payer_plan_period</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - ${staging}.who_idsr_staging</from>
+      <to>Table Exists - ${cdm_schema}.care_site</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Set variables</from>
+      <to>SQL - ${staging}.who_idsr_staging</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+  </hops>
+  <notepads>
+  </notepads>
+  <attributes/>
+</job>
