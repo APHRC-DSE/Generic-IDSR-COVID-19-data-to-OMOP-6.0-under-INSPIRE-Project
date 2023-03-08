@@ -428,7 +428,7 @@
     <created_user>-</created_user>
     <created_date>2023/02/06 12:43:18.718</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2023/03/08 12:24:40.895</modified_date>
+    <modified_date>2023/03/08 22:27:43.500</modified_date>
     <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
@@ -498,48 +498,6 @@
     </hop>
   </order>
   <step>
-    <name>Sort rows_with_drug_exposure_id</name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <directory>%%java.io.tmpdir%%</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
-    <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
-    <fields>
-      <field>
-        <name>drug_exposure_id</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>624</xloc>
-      <yloc>96</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
     <name>${cdm_5_4_schema}.drug_exposure</name>
     <type>TableOutput</type>
     <description/>
@@ -586,7 +544,7 @@
       </field>
       <field>
         <column_name>drug_exposure_start_datetime</column_name>
-        <stream_name>drug_exposure_start_datetime</stream_name>
+        <stream_name>drug_exposure_start_timestamp</stream_name>
       </field>
       <field>
         <column_name>drug_exposure_end_date</column_name>
@@ -594,7 +552,7 @@
       </field>
       <field>
         <column_name>drug_exposure_end_datetime</column_name>
-        <stream_name>drug_exposure_end_datetime</stream_name>
+        <stream_name>drug_exposure_end_timestamp</stream_name>
       </field>
       <field>
         <column_name>verbatim_end_date</column_name>
@@ -692,9 +650,9 @@
 , person_id
 , drug_concept_id
 , drug_exposure_start_date
-, drug_exposure_start_datetime
+, drug_exposure_start_timestamp
 , drug_exposure_end_date
-, drug_exposure_end_datetime
+, drug_exposure_end_timestamp
 , verbatim_end_date
 , drug_type_concept_id
 , stop_reason
@@ -726,7 +684,7 @@ FROM ${cdm_6_0_schema}.drug_exposure
         <name>drug_exposure_id</name>
         <length>15</length>
         <precision>0</precision>
-        <origin>omop_60_drug_exposure_read</origin>
+        <origin>Input - ${cdm_6_0_schema}.drug_exposure</origin>
         <comments>drug_exposure_id</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>.</decimal_symbol>
@@ -749,7 +707,7 @@ FROM ${cdm_6_0_schema}.drug_exposure
         <name>person_id</name>
         <length>15</length>
         <precision>0</precision>
-        <origin>omop_60_drug_exposure_read</origin>
+        <origin>Input - ${cdm_6_0_schema}.drug_exposure</origin>
         <comments>person_id</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>.</decimal_symbol>
@@ -772,7 +730,7 @@ FROM ${cdm_6_0_schema}.drug_exposure
         <name>drug_concept_id</name>
         <length>9</length>
         <precision>0</precision>
-        <origin>omop_60_drug_exposure_read</origin>
+        <origin>Input - ${cdm_6_0_schema}.drug_exposure</origin>
         <comments>drug_concept_id</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>.</decimal_symbol>
@@ -795,7 +753,7 @@ FROM ${cdm_6_0_schema}.drug_exposure
         <name>drug_exposure_start_date</name>
         <length>-1</length>
         <precision>-1</precision>
-        <origin>omop_60_drug_exposure_read</origin>
+        <origin>Input - ${cdm_6_0_schema}.drug_exposure</origin>
         <comments>drug_exposure_start_date</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
@@ -815,11 +773,11 @@ FROM ${cdm_6_0_schema}.drug_exposure
       <value-meta>
         <type>Timestamp</type>
         <storagetype>normal</storagetype>
-        <name>drug_exposure_start_datetime</name>
+        <name>drug_exposure_start_timestamp</name>
         <length>6</length>
         <precision>-1</precision>
-        <origin>omop_60_drug_exposure_read</origin>
-        <comments>drug_exposure_start_datetime</comments>
+        <origin>Input - ${cdm_6_0_schema}.drug_exposure</origin>
+        <comments>drug_exposure_start_timestamp</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
         <grouping_symbol>,</grouping_symbol>
@@ -841,7 +799,7 @@ FROM ${cdm_6_0_schema}.drug_exposure
         <name>drug_exposure_end_date</name>
         <length>-1</length>
         <precision>-1</precision>
-        <origin>omop_60_drug_exposure_read</origin>
+        <origin>Input - ${cdm_6_0_schema}.drug_exposure</origin>
         <comments>drug_exposure_end_date</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
@@ -861,11 +819,11 @@ FROM ${cdm_6_0_schema}.drug_exposure
       <value-meta>
         <type>Timestamp</type>
         <storagetype>normal</storagetype>
-        <name>drug_exposure_end_datetime</name>
+        <name>drug_exposure_end_timestamp</name>
         <length>6</length>
         <precision>-1</precision>
-        <origin>omop_60_drug_exposure_read</origin>
-        <comments>drug_exposure_end_datetime</comments>
+        <origin>Input - ${cdm_6_0_schema}.drug_exposure</origin>
+        <comments>drug_exposure_end_timestamp</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
         <grouping_symbol>,</grouping_symbol>
@@ -887,7 +845,7 @@ FROM ${cdm_6_0_schema}.drug_exposure
         <name>verbatim_end_date</name>
         <length>-1</length>
         <precision>-1</precision>
-        <origin>omop_60_drug_exposure_read</origin>
+        <origin>Input - ${cdm_6_0_schema}.drug_exposure</origin>
         <comments>verbatim_end_date</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
@@ -910,7 +868,7 @@ FROM ${cdm_6_0_schema}.drug_exposure
         <name>drug_type_concept_id</name>
         <length>9</length>
         <precision>0</precision>
-        <origin>omop_60_drug_exposure_read</origin>
+        <origin>Input - ${cdm_6_0_schema}.drug_exposure</origin>
         <comments>drug_type_concept_id</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>.</decimal_symbol>
@@ -933,7 +891,7 @@ FROM ${cdm_6_0_schema}.drug_exposure
         <name>stop_reason</name>
         <length>20</length>
         <precision>-1</precision>
-        <origin>omop_60_drug_exposure_read</origin>
+        <origin>Input - ${cdm_6_0_schema}.drug_exposure</origin>
         <comments>stop_reason</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
@@ -956,7 +914,7 @@ FROM ${cdm_6_0_schema}.drug_exposure
         <name>refills</name>
         <length>9</length>
         <precision>0</precision>
-        <origin>omop_60_drug_exposure_read</origin>
+        <origin>Input - ${cdm_6_0_schema}.drug_exposure</origin>
         <comments>refills</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>.</decimal_symbol>
@@ -974,16 +932,16 @@ FROM ${cdm_6_0_schema}.drug_exposure
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
       <value-meta>
-        <type>Number</type>
+        <type>BigNumber</type>
         <storagetype>normal</storagetype>
         <name>quantity</name>
         <length>-1</length>
         <precision>-1</precision>
-        <origin>omop_60_drug_exposure_read</origin>
+        <origin>Input - ${cdm_6_0_schema}.drug_exposure</origin>
         <comments>quantity</comments>
-        <conversion_Mask>####0.0#########;-####0.0#########</conversion_Mask>
+        <conversion_Mask>######0.0###################;-######0.0###################</conversion_Mask>
         <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol>,</grouping_symbol>
+        <grouping_symbol/>
         <currency_symbol/>
         <trim_type>none</trim_type>
         <case_insensitive>N</case_insensitive>
@@ -1002,7 +960,7 @@ FROM ${cdm_6_0_schema}.drug_exposure
         <name>days_supply</name>
         <length>9</length>
         <precision>0</precision>
-        <origin>omop_60_drug_exposure_read</origin>
+        <origin>Input - ${cdm_6_0_schema}.drug_exposure</origin>
         <comments>days_supply</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>.</decimal_symbol>
@@ -1025,7 +983,7 @@ FROM ${cdm_6_0_schema}.drug_exposure
         <name>sig</name>
         <length>2147483647</length>
         <precision>-1</precision>
-        <origin>omop_60_drug_exposure_read</origin>
+        <origin>Input - ${cdm_6_0_schema}.drug_exposure</origin>
         <comments>sig</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
@@ -1048,7 +1006,7 @@ FROM ${cdm_6_0_schema}.drug_exposure
         <name>route_concept_id</name>
         <length>9</length>
         <precision>0</precision>
-        <origin>omop_60_drug_exposure_read</origin>
+        <origin>Input - ${cdm_6_0_schema}.drug_exposure</origin>
         <comments>route_concept_id</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>.</decimal_symbol>
@@ -1071,7 +1029,7 @@ FROM ${cdm_6_0_schema}.drug_exposure
         <name>lot_number</name>
         <length>50</length>
         <precision>-1</precision>
-        <origin>omop_60_drug_exposure_read</origin>
+        <origin>Input - ${cdm_6_0_schema}.drug_exposure</origin>
         <comments>lot_number</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
@@ -1094,7 +1052,7 @@ FROM ${cdm_6_0_schema}.drug_exposure
         <name>provider_id</name>
         <length>15</length>
         <precision>0</precision>
-        <origin>omop_60_drug_exposure_read</origin>
+        <origin>Input - ${cdm_6_0_schema}.drug_exposure</origin>
         <comments>provider_id</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>.</decimal_symbol>
@@ -1117,7 +1075,7 @@ FROM ${cdm_6_0_schema}.drug_exposure
         <name>visit_occurrence_id</name>
         <length>15</length>
         <precision>0</precision>
-        <origin>omop_60_drug_exposure_read</origin>
+        <origin>Input - ${cdm_6_0_schema}.drug_exposure</origin>
         <comments>visit_occurrence_id</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>.</decimal_symbol>
@@ -1140,7 +1098,7 @@ FROM ${cdm_6_0_schema}.drug_exposure
         <name>visit_detail_id</name>
         <length>15</length>
         <precision>0</precision>
-        <origin>omop_60_drug_exposure_read</origin>
+        <origin>Input - ${cdm_6_0_schema}.drug_exposure</origin>
         <comments>visit_detail_id</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>.</decimal_symbol>
@@ -1163,7 +1121,7 @@ FROM ${cdm_6_0_schema}.drug_exposure
         <name>drug_source_value</name>
         <length>50</length>
         <precision>-1</precision>
-        <origin>omop_60_drug_exposure_read</origin>
+        <origin>Input - ${cdm_6_0_schema}.drug_exposure</origin>
         <comments>drug_source_value</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
@@ -1186,7 +1144,7 @@ FROM ${cdm_6_0_schema}.drug_exposure
         <name>drug_source_concept_id</name>
         <length>9</length>
         <precision>0</precision>
-        <origin>omop_60_drug_exposure_read</origin>
+        <origin>Input - ${cdm_6_0_schema}.drug_exposure</origin>
         <comments>drug_source_concept_id</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>.</decimal_symbol>
@@ -1209,7 +1167,7 @@ FROM ${cdm_6_0_schema}.drug_exposure
         <name>route_source_value</name>
         <length>50</length>
         <precision>-1</precision>
-        <origin>omop_60_drug_exposure_read</origin>
+        <origin>Input - ${cdm_6_0_schema}.drug_exposure</origin>
         <comments>route_source_value</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
@@ -1232,7 +1190,7 @@ FROM ${cdm_6_0_schema}.drug_exposure
         <name>dose_unit_source_value</name>
         <length>50</length>
         <precision>-1</precision>
-        <origin>omop_60_drug_exposure_read</origin>
+        <origin>Input - ${cdm_6_0_schema}.drug_exposure</origin>
         <comments>dose_unit_source_value</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
@@ -1260,6 +1218,48 @@ FROM ${cdm_6_0_schema}.drug_exposure
     </remotesteps>
     <GUI>
       <xloc>208</xloc>
+      <yloc>96</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Sort rows_with_drug_exposure_id</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>drug_exposure_id</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>624</xloc>
       <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>
