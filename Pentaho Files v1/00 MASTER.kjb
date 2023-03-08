@@ -7,7 +7,7 @@
   <created_user>-</created_user>
   <created_date>2023/02/08 10:29:00.686</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2023/03/06 12:19:22.581</modified_date>
+  <modified_date>2023/03/08 20:53:29.971</modified_date>
   <parameters>
     </parameters>
   <slaveservers>
@@ -611,8 +611,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>512</xloc>
-      <yloc>352</yloc>
+      <xloc>784</xloc>
+      <yloc>368</yloc>
       <attributes_kjc/>
     </entry>
     <entry>
@@ -692,6 +692,43 @@
       <yloc>208</yloc>
       <attributes_kjc/>
     </entry>
+    <entry>
+      <name>04 Create Table Constraints</name>
+      <description/>
+      <type>JOB</type>
+      <attributes/>
+      <specification_method>rep_name</specification_method>
+      <job_object_id/>
+      <filename/>
+      <jobname>04 Create Table Constraints</jobname>
+      <directory>/Misc</directory>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Nothing</loglevel>
+      <slave_server_name/>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <expand_remote_job>N</expand_remote_job>
+      <create_parent_folder>N</create_parent_folder>
+      <pass_export>N</pass_export>
+      <run_configuration>Pentaho local</run_configuration>
+      <parameters>
+        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>
+      <set_append_logfile>N</set_append_logfile>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>512</xloc>
+      <yloc>368</yloc>
+      <attributes_kjc/>
+    </entry>
   </entries>
   <hops>
     <hop>
@@ -758,15 +795,6 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>07 Vaccination</from>
-      <to>Success</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
       <from>Populate Staging Table</from>
       <to>01 Demographics</to>
       <from_nr>0</from_nr>
@@ -780,13 +808,31 @@
       <to>Create Tables</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
     <hop>
       <from>Create Tables</from>
       <to>Populate Staging Table</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>07 Vaccination</from>
+      <to>04 Create Table Constraints</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>04 Create Table Constraints</from>
+      <to>Success</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
