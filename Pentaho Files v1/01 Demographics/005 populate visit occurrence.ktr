@@ -1,10 +1,11 @@
 <transformation>
   <info>
     <name>005 populate visit occurrence</name>
-    <description/>
-    <extended_description/>
+    <description>Written by: Tathagata Bhattacharjee</description>
+    <extended_description>This Pentaho Transformation is written by Tathagata Bhattacharjee</extended_description>
     <trans_version/>
     <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
     <directory>/01 Demographics</directory>
     <parameters>
     </parameters>
@@ -428,7 +429,7 @@
     <created_user>-</created_user>
     <created_date>2023/02/08 20:24:26.501</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2023/03/08 21:23:45.775</modified_date>
+    <modified_date>2023/03/13 11:49:00.366</modified_date>
     <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
@@ -787,27 +788,21 @@
     <fields>
       <field>
         <name>person_id</name>
-        <rename/>
       </field>
       <field>
         <name>report_country</name>
-        <rename/>
       </field>
       <field>
         <name>report_province</name>
-        <rename/>
       </field>
       <field>
         <name>report_district</name>
-        <rename/>
       </field>
       <field>
         <name>report_site</name>
-        <rename/>
       </field>
       <field>
         <name>diagnosis</name>
-        <rename/>
       </field>
       <field>
         <name>patient_type</name>
@@ -831,131 +826,99 @@
       </field>
       <field>
         <name>patient_name</name>
-        <rename/>
       </field>
       <field>
         <name>patient_dob</name>
-        <rename/>
       </field>
       <field>
         <name>age_years</name>
-        <rename/>
       </field>
       <field>
         <name>age_months</name>
-        <rename/>
       </field>
       <field>
         <name>age_days</name>
-        <rename/>
       </field>
       <field>
         <name>patient_sex</name>
-        <rename/>
       </field>
       <field>
         <name>patient_residence</name>
-        <rename/>
       </field>
       <field>
         <name>patient_town_city</name>
-        <rename/>
       </field>
       <field>
         <name>patient_district</name>
-        <rename/>
       </field>
       <field>
         <name>patient_area_type</name>
-        <rename/>
       </field>
       <field>
         <name>patient_address</name>
-        <rename/>
       </field>
       <field>
         <name>patient_occupation</name>
-        <rename/>
       </field>
       <field>
         <name>date_onset_symptoms</name>
-        <rename/>
       </field>
       <field>
         <name>travel_history</name>
-        <rename/>
       </field>
       <field>
         <name>travel_destination</name>
-        <rename/>
       </field>
       <field>
         <name>vaccine_doses_received</name>
-        <rename/>
       </field>
       <field>
         <name>date_last_vaccine</name>
-        <rename/>
       </field>
       <field>
         <name>vaccine_name</name>
-        <rename/>
       </field>
       <field>
         <name>date_specimen_collected</name>
-        <rename/>
       </field>
       <field>
         <name>date_specimen_sent_lab</name>
-        <rename/>
       </field>
       <field>
         <name>lab_result</name>
-        <rename/>
       </field>
       <field>
         <name>outcome</name>
-        <rename/>
       </field>
       <field>
         <name>final_classification</name>
-        <rename/>
       </field>
       <field>
         <name>date_form_sent_district</name>
-        <rename/>
       </field>
       <field>
         <name>date_facility_notified_district</name>
-        <rename/>
       </field>
       <field>
         <name>person_form_complete</name>
-        <rename/>
       </field>
       <field>
         <name>care_site_id</name>
-        <rename/>
       </field>
       <field>
         <name>provider_id</name>
-        <rename/>
       </field>
       <field>
         <name>location_id</name>
-        <rename/>
       </field>
       <field>
         <name>max_visit_occurrence_id</name>
-        <rename/>
       </field>
       <field>
         <name>visit_occurrence_id_sequence</name>
-        <rename/>
       </field>
       <field>
         <name>visit_occurrence_id</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -987,71 +950,54 @@
     <fields>
       <field>
         <name>visit_occurrence_id</name>
-        <rename/>
       </field>
       <field>
         <name>person_id</name>
-        <rename/>
       </field>
       <field>
         <name>visit_concept_id</name>
-        <rename/>
       </field>
       <field>
         <name>visit_start_date</name>
-        <rename/>
       </field>
       <field>
         <name>visit_start_timestamp</name>
-        <rename/>
       </field>
       <field>
         <name>visit_end_date</name>
-        <rename/>
       </field>
       <field>
         <name>visit_end_timestamp</name>
-        <rename/>
       </field>
       <field>
         <name>visit_type_concept_id</name>
-        <rename/>
       </field>
       <field>
         <name>provider_id</name>
-        <rename/>
       </field>
       <field>
         <name>care_site_id</name>
-        <rename/>
       </field>
       <field>
         <name>visit_source_value</name>
-        <rename/>
       </field>
       <field>
         <name>visit_source_concept_id</name>
-        <rename/>
       </field>
       <field>
         <name>admitted_from_concept_id</name>
-        <rename/>
       </field>
       <field>
         <name>admitted_from_source_value</name>
-        <rename/>
       </field>
       <field>
         <name>discharge_to_concept_id</name>
-        <rename/>
       </field>
       <field>
         <name>discharge_to_source_value</name>
-        <rename/>
       </field>
       <field>
         <name>preceding_visit_occurrence_id</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1083,71 +1029,54 @@
     <fields>
       <field>
         <name>visit_occurrence_id</name>
-        <rename/>
       </field>
       <field>
         <name>person_id</name>
-        <rename/>
       </field>
       <field>
         <name>visit_concept_id</name>
-        <rename/>
       </field>
       <field>
         <name>visit_start_date</name>
-        <rename/>
       </field>
       <field>
         <name>visit_start_timestamp</name>
-        <rename/>
       </field>
       <field>
         <name>visit_end_date</name>
-        <rename/>
       </field>
       <field>
         <name>visit_end_timestamp</name>
-        <rename/>
       </field>
       <field>
         <name>visit_type_concept_id</name>
-        <rename/>
       </field>
       <field>
         <name>provider_id</name>
-        <rename/>
       </field>
       <field>
         <name>care_site_id</name>
-        <rename/>
       </field>
       <field>
         <name>visit_source_value</name>
-        <rename/>
       </field>
       <field>
         <name>visit_source_concept_id</name>
-        <rename/>
       </field>
       <field>
         <name>admitted_from_concept_id</name>
-        <rename/>
       </field>
       <field>
         <name>admitted_from_source_value</name>
-        <rename/>
       </field>
       <field>
         <name>discharge_to_concept_id</name>
-        <rename/>
       </field>
       <field>
         <name>discharge_to_source_value</name>
-        <rename/>
       </field>
       <field>
         <name>preceding_visit_occurrence_id</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
       <meta>

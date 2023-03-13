@@ -1,8 +1,8 @@
 <transformation>
   <info>
     <name>003 populate location</name>
-    <description/>
-    <extended_description>This Pentaho Transformation is created by Tathagata Bhattacharjee</extended_description>
+    <description>Written by: Tathagata Bhattacharjee</description>
+    <extended_description>This Pentaho Transformation is written by Tathagata Bhattacharjee</extended_description>
     <trans_version>Tathagata 1.0</trans_version>
     <trans_type>Normal</trans_type>
     <trans_status>1</trans_status>
@@ -429,7 +429,7 @@
     <created_user>-</created_user>
     <created_date>2022/07/18 22:25:29.149</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2023/03/03 15:21:25.754</modified_date>
+    <modified_date>2023/03/13 12:04:42.904</modified_date>
     <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
@@ -549,21 +549,21 @@
     </hop>
     <hop>
       <from>Select values 3</from>
-      <to>Sort patient name 2</to>
+      <to>Sort rec_identifier 1</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Table ${staging}.who_idsr_staging_3</from>
-      <to>Sort patient name 3</to>
+      <to>Sortrec_identifier 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Sort patient name 3</from>
+      <from>Sortrec_identifier 2</from>
       <to>Merge join</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Sort patient name 2</from>
+      <from>Sort rec_identifier 1</from>
       <to>Merge join</to>
       <enabled>Y</enabled>
     </hop>
@@ -795,19 +795,13 @@
       <schema_name/>
     </partitioning>
     <join_type>INNER</join_type>
-    <step1>Sort patient name 2</step1>
-    <step2>Sort patient name 3</step2>
+    <step1>Sort rec_identifier 1</step1>
+    <step2>Sortrec_identifier 2</step2>
     <keys_1>
-      <key>patient_name</key>
-      <key>patient_dob</key>
-      <key>patient_sex</key>
-      <key>patient_address</key>
+      <key>rec_identifier</key>
     </keys_1>
     <keys_2>
-      <key>patient_name</key>
-      <key>patient_dob</key>
-      <key>patient_sex</key>
-      <key>patient_address</key>
+      <key>rec_identifier</key>
     </keys_2>
     <attributes/>
     <cluster_schema/>
@@ -863,6 +857,9 @@
       </field>
       <field>
         <name>patient_sex</name>
+      </field>
+      <field>
+        <name>rec_identifier</name>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -966,6 +963,9 @@
       </field>
       <field>
         <name>location_id</name>
+      </field>
+      <field>
+        <name>rec_identifier</name>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1192,7 +1192,7 @@
     </GUI>
   </step>
   <step>
-    <name>Sort patient name 2</name>
+    <name>Sort rec_identifier 1</name>
     <type>SortRows</type>
     <description/>
     <distribute>Y</distribute>
@@ -1211,31 +1211,7 @@
     <unique_rows>N</unique_rows>
     <fields>
       <field>
-        <name>patient_name</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
-        <name>patient_dob</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
-        <name>patient_sex</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
-        <name>patient_address</name>
+        <name>rec_identifier</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
@@ -1254,72 +1230,6 @@
     <GUI>
       <xloc>1392</xloc>
       <yloc>320</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Sort patient name 3</name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <directory>%%java.io.tmpdir%%</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
-    <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
-    <fields>
-      <field>
-        <name>patient_name</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
-        <name>patient_dob</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
-        <name>patient_sex</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-      <field>
-        <name>patient_address</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1392</xloc>
-      <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1362,6 +1272,48 @@
     <GUI>
       <xloc>1968</xloc>
       <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Sortrec_identifier 2</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>rec_identifier</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1392</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3349,6 +3301,50 @@ FROM ${schema}_${version}.who_idsr_synthetic_${version}
     </GUI>
   </step>
   <step>
+    <name>Table - ${staging}.who_idsr_staging_4</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>IDSR Synthetic</connection>
+    <schema>${staging}</schema>
+    <table>who_idsr_staging_4</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>N</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1968</xloc>
+      <yloc>208</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>Table output - ${cdm_schema}.location</name>
     <type>TableOutput</type>
     <description/>
@@ -3436,50 +3432,6 @@ FROM ${schema}_${version}.who_idsr_synthetic_${version}
     <GUI>
       <xloc>336</xloc>
       <yloc>320</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Table - ${staging}.who_idsr_staging_4</name>
-    <type>TableOutput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>IDSR Synthetic</connection>
-    <schema>${staging}</schema>
-    <table>who_idsr_staging_4</table>
-    <commit>1000</commit>
-    <truncate>Y</truncate>
-    <ignore_errors>N</ignore_errors>
-    <use_batch>Y</use_batch>
-    <specify_fields>N</specify_fields>
-    <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
-    <partitioning_daily>N</partitioning_daily>
-    <partitioning_monthly>Y</partitioning_monthly>
-    <tablename_in_field>N</tablename_in_field>
-    <tablename_field/>
-    <tablename_in_table>Y</tablename_in_table>
-    <return_keys>N</return_keys>
-    <return_field/>
-    <fields>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1968</xloc>
-      <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
