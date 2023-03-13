@@ -1,10 +1,11 @@
 <transformation>
   <info>
     <name>001 populate measurement</name>
-    <description/>
-    <extended_description/>
+    <description>Written by: Tathagata Bhattacharjee</description>
+    <extended_description>This Pentaho Transformation is written by Tathagata Bhattacharjee</extended_description>
     <trans_version/>
     <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
     <directory>/05 The Assay</directory>
     <parameters>
     </parameters>
@@ -428,7 +429,7 @@
     <created_user>-</created_user>
     <created_date>2023/02/10 15:55:34.177</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2023/03/08 21:57:02.773</modified_date>
+    <modified_date>2023/03/13 11:51:42.129</modified_date>
     <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
@@ -1017,79 +1018,60 @@
     <fields>
       <field>
         <name>measurement_id</name>
-        <rename/>
       </field>
       <field>
         <name>person_id</name>
-        <rename/>
       </field>
       <field>
         <name>measurement_concept_id</name>
-        <rename/>
       </field>
       <field>
         <name>measurement_date</name>
-        <rename/>
       </field>
       <field>
         <name>measurement_datetime</name>
-        <rename/>
       </field>
       <field>
         <name>measurement_time</name>
-        <rename/>
       </field>
       <field>
         <name>measurement_type_concept_id</name>
-        <rename/>
       </field>
       <field>
         <name>operator_concept_id</name>
-        <rename/>
       </field>
       <field>
         <name>value_as_number</name>
-        <rename/>
       </field>
       <field>
         <name>value_as_concept_id</name>
-        <rename/>
       </field>
       <field>
         <name>range_low</name>
-        <rename/>
       </field>
       <field>
         <name>range_high</name>
-        <rename/>
       </field>
       <field>
         <name>provider_id</name>
-        <rename/>
       </field>
       <field>
         <name>visit_occurrence_id</name>
-        <rename/>
       </field>
       <field>
         <name>visit_detail_id</name>
-        <rename/>
       </field>
       <field>
         <name>measurement_source_value</name>
-        <rename/>
       </field>
       <field>
         <name>measurement_source_concept_id</name>
-        <rename/>
       </field>
       <field>
         <name>unit_source_value</name>
-        <rename/>
       </field>
       <field>
         <name>value_source_value</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
       <meta>
