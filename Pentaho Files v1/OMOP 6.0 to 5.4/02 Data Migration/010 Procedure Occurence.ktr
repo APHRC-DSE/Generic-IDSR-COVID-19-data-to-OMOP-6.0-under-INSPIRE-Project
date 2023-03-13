@@ -1,10 +1,11 @@
 <transformation>
   <info>
     <name>010 Procedure Occurence</name>
-    <description/>
-    <extended_description/>
+    <description>Updated by Tathagata Bhattacharjee</description>
+    <extended_description>This Pentaho Transformation has been updated by Tathagata Bhattacharjee</extended_description>
     <trans_version/>
     <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
     <directory>/OMOP 6.0 to 5.4/02 Data Migration</directory>
     <parameters>
     </parameters>
@@ -428,7 +429,7 @@
     <created_user>-</created_user>
     <created_date>2023/02/06 15:01:41.119</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2023/03/08 12:28:17.596</modified_date>
+    <modified_date>2023/03/13 17:03:52.326</modified_date>
     <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
@@ -497,148 +498,6 @@
       <enabled>Y</enabled>
     </hop>
   </order>
-  <step>
-    <name>Sort rows_with_procedure_occurence_id</name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <directory>%%java.io.tmpdir%%</directory>
-    <prefix>out</prefix>
-    <sort_size>1000000</sort_size>
-    <free_memory/>
-    <compress>N</compress>
-    <compress_variable/>
-    <unique_rows>N</unique_rows>
-    <fields>
-      <field>
-        <name>procedure_occurrence_id</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>752</xloc>
-      <yloc>112</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Output - ${cdm_5_4_schema}.procedure_occurence</name>
-    <type>TableOutput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>IDSR Synthetic</connection>
-    <schema>${cdm_5_4_schema}</schema>
-    <table>procedure_occurrence</table>
-    <commit>1000</commit>
-    <truncate>Y</truncate>
-    <ignore_errors>N</ignore_errors>
-    <use_batch>Y</use_batch>
-    <specify_fields>Y</specify_fields>
-    <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
-    <partitioning_daily>N</partitioning_daily>
-    <partitioning_monthly>Y</partitioning_monthly>
-    <tablename_in_field>N</tablename_in_field>
-    <tablename_field/>
-    <tablename_in_table>Y</tablename_in_table>
-    <return_keys>N</return_keys>
-    <return_field/>
-    <fields>
-      <field>
-        <column_name>procedure_occurrence_id</column_name>
-        <stream_name>procedure_occurrence_id</stream_name>
-      </field>
-      <field>
-        <column_name>person_id</column_name>
-        <stream_name>person_id</stream_name>
-      </field>
-      <field>
-        <column_name>procedure_concept_id</column_name>
-        <stream_name>procedure_concept_id</stream_name>
-      </field>
-      <field>
-        <column_name>procedure_date</column_name>
-        <stream_name>procedure_date</stream_name>
-      </field>
-      <field>
-        <column_name>procedure_timestamp</column_name>
-        <stream_name>procedure_timestamp</stream_name>
-      </field>
-      <field>
-        <column_name>procedure_type_concept_id</column_name>
-        <stream_name>procedure_type_concept_id</stream_name>
-      </field>
-      <field>
-        <column_name>modifier_concept_id</column_name>
-        <stream_name>modifier_concept_id</stream_name>
-      </field>
-      <field>
-        <column_name>quantity</column_name>
-        <stream_name>quantity</stream_name>
-      </field>
-      <field>
-        <column_name>provider_id</column_name>
-        <stream_name>provider_id</stream_name>
-      </field>
-      <field>
-        <column_name>visit_occurrence_id</column_name>
-        <stream_name>visit_occurrence_id</stream_name>
-      </field>
-      <field>
-        <column_name>visit_detail_id</column_name>
-        <stream_name>visit_detail_id</stream_name>
-      </field>
-      <field>
-        <column_name>procedure_source_value</column_name>
-        <stream_name>procedure_source_value</stream_name>
-      </field>
-      <field>
-        <column_name>procedure_source_concept_id</column_name>
-        <stream_name>procedure_source_concept_id</stream_name>
-      </field>
-      <field>
-        <column_name>modifier_source_value</column_name>
-        <stream_name>modifier_source_value</stream_name>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1168</xloc>
-      <yloc>112</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
   <step>
     <name>Input - ${cdm_6_0_schema}.procedure_occurrence</name>
     <type>TableInput</type>
@@ -1008,6 +867,148 @@ FROM ${cdm_6_0_schema}.procedure_occurrence
     </remotesteps>
     <GUI>
       <xloc>288</xloc>
+      <yloc>112</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Output - ${cdm_5_4_schema}.procedure_occurence</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>IDSR Synthetic</connection>
+    <schema>${cdm_5_4_schema}</schema>
+    <table>procedure_occurrence</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+      <field>
+        <column_name>procedure_occurrence_id</column_name>
+        <stream_name>procedure_occurrence_id</stream_name>
+      </field>
+      <field>
+        <column_name>person_id</column_name>
+        <stream_name>person_id</stream_name>
+      </field>
+      <field>
+        <column_name>procedure_concept_id</column_name>
+        <stream_name>procedure_concept_id</stream_name>
+      </field>
+      <field>
+        <column_name>procedure_date</column_name>
+        <stream_name>procedure_date</stream_name>
+      </field>
+      <field>
+        <column_name>procedure_timestamp</column_name>
+        <stream_name>procedure_timestamp</stream_name>
+      </field>
+      <field>
+        <column_name>procedure_type_concept_id</column_name>
+        <stream_name>procedure_type_concept_id</stream_name>
+      </field>
+      <field>
+        <column_name>modifier_concept_id</column_name>
+        <stream_name>modifier_concept_id</stream_name>
+      </field>
+      <field>
+        <column_name>quantity</column_name>
+        <stream_name>quantity</stream_name>
+      </field>
+      <field>
+        <column_name>provider_id</column_name>
+        <stream_name>provider_id</stream_name>
+      </field>
+      <field>
+        <column_name>visit_occurrence_id</column_name>
+        <stream_name>visit_occurrence_id</stream_name>
+      </field>
+      <field>
+        <column_name>visit_detail_id</column_name>
+        <stream_name>visit_detail_id</stream_name>
+      </field>
+      <field>
+        <column_name>procedure_source_value</column_name>
+        <stream_name>procedure_source_value</stream_name>
+      </field>
+      <field>
+        <column_name>procedure_source_concept_id</column_name>
+        <stream_name>procedure_source_concept_id</stream_name>
+      </field>
+      <field>
+        <column_name>modifier_source_value</column_name>
+        <stream_name>modifier_source_value</stream_name>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1168</xloc>
+      <yloc>112</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Sort rows_with_procedure_occurence_id</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>procedure_occurrence_id</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>752</xloc>
       <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
