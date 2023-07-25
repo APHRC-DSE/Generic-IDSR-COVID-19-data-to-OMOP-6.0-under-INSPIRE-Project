@@ -1,0 +1,776 @@
+<job>
+  <name>03 Table Constraints</name>
+  <description>Written by: Tathagata Bhattacharjee</description>
+  <extended_description>This Pentaho Job is written by Tathagata Bhattacharjee</extended_description>
+  <job_version/>
+  <job_status>0</job_status>
+  <directory>/OMOP 6.0 to 5.4</directory>
+  <created_user>-</created_user>
+  <created_date>2023/03/08 13:32:07.276</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2023/03/13 17:08:28.910</modified_date>
+  <parameters>
+    </parameters>
+  <connection>
+    <name>IDSR Synthetic</name>
+    <server>localhost</server>
+    <type>POSTGRESQL</type>
+    <access>Native</access>
+    <database>IDSR</database>
+    <port>5432</port>
+    <username>postgres</username>
+    <password>Encrypted 2be98afc81ac68197bc16bc748fc0fc8e</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>5432</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <slaveservers>
+    </slaveservers>
+  <job-log-table>
+    <connection/>
+    <schema/>
+    <table/>
+    <size_limit_lines/>
+    <interval/>
+    <timeout_days/>
+    <field>
+      <id>ID_JOB</id>
+      <enabled>Y</enabled>
+      <name>ID_JOB</name>
+    </field>
+    <field>
+      <id>CHANNEL_ID</id>
+      <enabled>Y</enabled>
+      <name>CHANNEL_ID</name>
+    </field>
+    <field>
+      <id>JOBNAME</id>
+      <enabled>Y</enabled>
+      <name>JOBNAME</name>
+    </field>
+    <field>
+      <id>STATUS</id>
+      <enabled>Y</enabled>
+      <name>STATUS</name>
+    </field>
+    <field>
+      <id>LINES_READ</id>
+      <enabled>Y</enabled>
+      <name>LINES_READ</name>
+    </field>
+    <field>
+      <id>LINES_WRITTEN</id>
+      <enabled>Y</enabled>
+      <name>LINES_WRITTEN</name>
+    </field>
+    <field>
+      <id>LINES_UPDATED</id>
+      <enabled>Y</enabled>
+      <name>LINES_UPDATED</name>
+    </field>
+    <field>
+      <id>LINES_INPUT</id>
+      <enabled>Y</enabled>
+      <name>LINES_INPUT</name>
+    </field>
+    <field>
+      <id>LINES_OUTPUT</id>
+      <enabled>Y</enabled>
+      <name>LINES_OUTPUT</name>
+    </field>
+    <field>
+      <id>LINES_REJECTED</id>
+      <enabled>Y</enabled>
+      <name>LINES_REJECTED</name>
+    </field>
+    <field>
+      <id>ERRORS</id>
+      <enabled>Y</enabled>
+      <name>ERRORS</name>
+    </field>
+    <field>
+      <id>STARTDATE</id>
+      <enabled>Y</enabled>
+      <name>STARTDATE</name>
+    </field>
+    <field>
+      <id>ENDDATE</id>
+      <enabled>Y</enabled>
+      <name>ENDDATE</name>
+    </field>
+    <field>
+      <id>LOGDATE</id>
+      <enabled>Y</enabled>
+      <name>LOGDATE</name>
+    </field>
+    <field>
+      <id>DEPDATE</id>
+      <enabled>Y</enabled>
+      <name>DEPDATE</name>
+    </field>
+    <field>
+      <id>REPLAYDATE</id>
+      <enabled>Y</enabled>
+      <name>REPLAYDATE</name>
+    </field>
+    <field>
+      <id>LOG_FIELD</id>
+      <enabled>Y</enabled>
+      <name>LOG_FIELD</name>
+    </field>
+    <field>
+      <id>EXECUTING_SERVER</id>
+      <enabled>N</enabled>
+      <name>EXECUTING_SERVER</name>
+    </field>
+    <field>
+      <id>EXECUTING_USER</id>
+      <enabled>N</enabled>
+      <name>EXECUTING_USER</name>
+    </field>
+    <field>
+      <id>START_JOB_ENTRY</id>
+      <enabled>N</enabled>
+      <name>START_JOB_ENTRY</name>
+    </field>
+    <field>
+      <id>CLIENT</id>
+      <enabled>N</enabled>
+      <name>CLIENT</name>
+    </field>
+  </job-log-table>
+  <jobentry-log-table>
+    <connection/>
+    <schema/>
+    <table/>
+    <timeout_days/>
+    <field>
+      <id>ID_BATCH</id>
+      <enabled>Y</enabled>
+      <name>ID_BATCH</name>
+    </field>
+    <field>
+      <id>CHANNEL_ID</id>
+      <enabled>Y</enabled>
+      <name>CHANNEL_ID</name>
+    </field>
+    <field>
+      <id>LOG_DATE</id>
+      <enabled>Y</enabled>
+      <name>LOG_DATE</name>
+    </field>
+    <field>
+      <id>JOBNAME</id>
+      <enabled>Y</enabled>
+      <name>TRANSNAME</name>
+    </field>
+    <field>
+      <id>JOBENTRYNAME</id>
+      <enabled>Y</enabled>
+      <name>STEPNAME</name>
+    </field>
+    <field>
+      <id>LINES_READ</id>
+      <enabled>Y</enabled>
+      <name>LINES_READ</name>
+    </field>
+    <field>
+      <id>LINES_WRITTEN</id>
+      <enabled>Y</enabled>
+      <name>LINES_WRITTEN</name>
+    </field>
+    <field>
+      <id>LINES_UPDATED</id>
+      <enabled>Y</enabled>
+      <name>LINES_UPDATED</name>
+    </field>
+    <field>
+      <id>LINES_INPUT</id>
+      <enabled>Y</enabled>
+      <name>LINES_INPUT</name>
+    </field>
+    <field>
+      <id>LINES_OUTPUT</id>
+      <enabled>Y</enabled>
+      <name>LINES_OUTPUT</name>
+    </field>
+    <field>
+      <id>LINES_REJECTED</id>
+      <enabled>Y</enabled>
+      <name>LINES_REJECTED</name>
+    </field>
+    <field>
+      <id>ERRORS</id>
+      <enabled>Y</enabled>
+      <name>ERRORS</name>
+    </field>
+    <field>
+      <id>RESULT</id>
+      <enabled>Y</enabled>
+      <name>RESULT</name>
+    </field>
+    <field>
+      <id>NR_RESULT_ROWS</id>
+      <enabled>Y</enabled>
+      <name>NR_RESULT_ROWS</name>
+    </field>
+    <field>
+      <id>NR_RESULT_FILES</id>
+      <enabled>Y</enabled>
+      <name>NR_RESULT_FILES</name>
+    </field>
+    <field>
+      <id>LOG_FIELD</id>
+      <enabled>N</enabled>
+      <name>LOG_FIELD</name>
+    </field>
+    <field>
+      <id>COPY_NR</id>
+      <enabled>N</enabled>
+      <name>COPY_NR</name>
+    </field>
+  </jobentry-log-table>
+  <channel-log-table>
+    <connection/>
+    <schema/>
+    <table/>
+    <timeout_days/>
+    <field>
+      <id>ID_BATCH</id>
+      <enabled>Y</enabled>
+      <name>ID_BATCH</name>
+    </field>
+    <field>
+      <id>CHANNEL_ID</id>
+      <enabled>Y</enabled>
+      <name>CHANNEL_ID</name>
+    </field>
+    <field>
+      <id>LOG_DATE</id>
+      <enabled>Y</enabled>
+      <name>LOG_DATE</name>
+    </field>
+    <field>
+      <id>LOGGING_OBJECT_TYPE</id>
+      <enabled>Y</enabled>
+      <name>LOGGING_OBJECT_TYPE</name>
+    </field>
+    <field>
+      <id>OBJECT_NAME</id>
+      <enabled>Y</enabled>
+      <name>OBJECT_NAME</name>
+    </field>
+    <field>
+      <id>OBJECT_COPY</id>
+      <enabled>Y</enabled>
+      <name>OBJECT_COPY</name>
+    </field>
+    <field>
+      <id>REPOSITORY_DIRECTORY</id>
+      <enabled>Y</enabled>
+      <name>REPOSITORY_DIRECTORY</name>
+    </field>
+    <field>
+      <id>FILENAME</id>
+      <enabled>Y</enabled>
+      <name>FILENAME</name>
+    </field>
+    <field>
+      <id>OBJECT_ID</id>
+      <enabled>Y</enabled>
+      <name>OBJECT_ID</name>
+    </field>
+    <field>
+      <id>OBJECT_REVISION</id>
+      <enabled>Y</enabled>
+      <name>OBJECT_REVISION</name>
+    </field>
+    <field>
+      <id>PARENT_CHANNEL_ID</id>
+      <enabled>Y</enabled>
+      <name>PARENT_CHANNEL_ID</name>
+    </field>
+    <field>
+      <id>ROOT_CHANNEL_ID</id>
+      <enabled>Y</enabled>
+      <name>ROOT_CHANNEL_ID</name>
+    </field>
+  </channel-log-table>
+  <pass_batchid>N</pass_batchid>
+  <shared_objects_file/>
+  <entries>
+    <entry>
+      <name>Set variables</name>
+      <description/>
+      <type>SET_VARIABLES</type>
+      <attributes/>
+      <replacevars>Y</replacevars>
+      <filename/>
+      <file_variable_type>JVM</file_variable_type>
+      <fields>
+      </fields>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>96</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Start</name>
+      <description/>
+      <type>SPECIAL</type>
+      <attributes/>
+      <start>Y</start>
+      <dummy>N</dummy>
+      <repeat>N</repeat>
+      <schedulerType>0</schedulerType>
+      <intervalSeconds>0</intervalSeconds>
+      <intervalMinutes>60</intervalMinutes>
+      <hour>12</hour>
+      <minutes>0</minutes>
+      <weekDay>1</weekDay>
+      <DayOfMonth>1</DayOfMonth>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>176</xloc>
+      <yloc>96</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - Create Constraints</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>--postgresql CDM Foreign Key Constraints for OMOP Common Data Model 5.4
+
+ALTER TABLE ${cdm_5_4_schema}.PERSON ADD CONSTRAINT fpk_PERSON_location_id FOREIGN KEY (location_id) REFERENCES ${cdm_5_4_schema}.LOCATION (LOCATION_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.PERSON ADD CONSTRAINT fpk_PERSON_provider_id FOREIGN KEY (provider_id) REFERENCES ${cdm_5_4_schema}.PROVIDER (PROVIDER_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.PERSON ADD CONSTRAINT fpk_PERSON_care_site_id FOREIGN KEY (care_site_id) REFERENCES ${cdm_5_4_schema}.CARE_SITE (CARE_SITE_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.OBSERVATION_PERIOD ADD CONSTRAINT fpk_OBSERVATION_PERIOD_person_id FOREIGN KEY (person_id) REFERENCES ${cdm_5_4_schema}.PERSON (PERSON_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.VISIT_OCCURRENCE ADD CONSTRAINT fpk_VISIT_OCCURRENCE_person_id FOREIGN KEY (person_id) REFERENCES ${cdm_5_4_schema}.PERSON (PERSON_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.VISIT_OCCURRENCE ADD CONSTRAINT fpk_VISIT_OCCURRENCE_provider_id FOREIGN KEY (provider_id) REFERENCES ${cdm_5_4_schema}.PROVIDER (PROVIDER_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.VISIT_OCCURRENCE ADD CONSTRAINT fpk_VISIT_OCCURRENCE_care_site_id FOREIGN KEY (care_site_id) REFERENCES ${cdm_5_4_schema}.CARE_SITE (CARE_SITE_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.VISIT_OCCURRENCE ADD CONSTRAINT fpk_VISIT_OCCURRENCE_preceding_visit_occurrence_id FOREIGN KEY (preceding_visit_occurrence_id) REFERENCES ${cdm_5_4_schema}.VISIT_OCCURRENCE (VISIT_OCCURRENCE_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.VISIT_DETAIL ADD CONSTRAINT fpk_VISIT_DETAIL_person_id FOREIGN KEY (person_id) REFERENCES ${cdm_5_4_schema}.PERSON (PERSON_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.VISIT_DETAIL ADD CONSTRAINT fpk_VISIT_DETAIL_provider_id FOREIGN KEY (provider_id) REFERENCES ${cdm_5_4_schema}.PROVIDER (PROVIDER_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.VISIT_DETAIL ADD CONSTRAINT fpk_VISIT_DETAIL_care_site_id FOREIGN KEY (care_site_id) REFERENCES ${cdm_5_4_schema}.CARE_SITE (CARE_SITE_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.VISIT_DETAIL ADD CONSTRAINT fpk_VISIT_DETAIL_preceding_visit_detail_id FOREIGN KEY (preceding_visit_detail_id) REFERENCES ${cdm_5_4_schema}.VISIT_DETAIL (VISIT_DETAIL_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.VISIT_DETAIL ADD CONSTRAINT fpk_VISIT_DETAIL_parent_visit_detail_id FOREIGN KEY (parent_visit_detail_id) REFERENCES ${cdm_5_4_schema}.VISIT_DETAIL (VISIT_DETAIL_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.VISIT_DETAIL ADD CONSTRAINT fpk_VISIT_DETAIL_visit_occurrence_id FOREIGN KEY (visit_occurrence_id) REFERENCES ${cdm_5_4_schema}.VISIT_OCCURRENCE (VISIT_OCCURRENCE_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.CONDITION_OCCURRENCE ADD CONSTRAINT fpk_CONDITION_OCCURRENCE_person_id FOREIGN KEY (person_id) REFERENCES ${cdm_5_4_schema}.PERSON (PERSON_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.CONDITION_OCCURRENCE ADD CONSTRAINT fpk_CONDITION_OCCURRENCE_provider_id FOREIGN KEY (provider_id) REFERENCES ${cdm_5_4_schema}.PROVIDER (PROVIDER_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.CONDITION_OCCURRENCE ADD CONSTRAINT fpk_CONDITION_OCCURRENCE_visit_occurrence_id FOREIGN KEY (visit_occurrence_id) REFERENCES ${cdm_5_4_schema}.VISIT_OCCURRENCE (VISIT_OCCURRENCE_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.CONDITION_OCCURRENCE ADD CONSTRAINT fpk_CONDITION_OCCURRENCE_visit_detail_id FOREIGN KEY (visit_detail_id) REFERENCES ${cdm_5_4_schema}.VISIT_DETAIL (VISIT_DETAIL_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.DRUG_EXPOSURE ADD CONSTRAINT fpk_DRUG_EXPOSURE_person_id FOREIGN KEY (person_id) REFERENCES ${cdm_5_4_schema}.PERSON (PERSON_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.DRUG_EXPOSURE ADD CONSTRAINT fpk_DRUG_EXPOSURE_provider_id FOREIGN KEY (provider_id) REFERENCES ${cdm_5_4_schema}.PROVIDER (PROVIDER_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.DRUG_EXPOSURE ADD CONSTRAINT fpk_DRUG_EXPOSURE_visit_occurrence_id FOREIGN KEY (visit_occurrence_id) REFERENCES ${cdm_5_4_schema}.VISIT_OCCURRENCE (VISIT_OCCURRENCE_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.DRUG_EXPOSURE ADD CONSTRAINT fpk_DRUG_EXPOSURE_visit_detail_id FOREIGN KEY (visit_detail_id) REFERENCES ${cdm_5_4_schema}.VISIT_DETAIL (VISIT_DETAIL_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.PROCEDURE_OCCURRENCE ADD CONSTRAINT fpk_PROCEDURE_OCCURRENCE_provider_id FOREIGN KEY (provider_id) REFERENCES ${cdm_5_4_schema}.PROVIDER (PROVIDER_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.PROCEDURE_OCCURRENCE ADD CONSTRAINT fpk_PROCEDURE_OCCURRENCE_visit_occurrence_id FOREIGN KEY (visit_occurrence_id) REFERENCES ${cdm_5_4_schema}.VISIT_OCCURRENCE (VISIT_OCCURRENCE_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.PROCEDURE_OCCURRENCE ADD CONSTRAINT fpk_PROCEDURE_OCCURRENCE_visit_detail_id FOREIGN KEY (visit_detail_id) REFERENCES ${cdm_5_4_schema}.VISIT_DETAIL (VISIT_DETAIL_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.DEVICE_EXPOSURE ADD CONSTRAINT fpk_DEVICE_EXPOSURE_person_id FOREIGN KEY (person_id) REFERENCES ${cdm_5_4_schema}.PERSON (PERSON_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.DEVICE_EXPOSURE ADD CONSTRAINT fpk_DEVICE_EXPOSURE_provider_id FOREIGN KEY (provider_id) REFERENCES ${cdm_5_4_schema}.PROVIDER (PROVIDER_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.DEVICE_EXPOSURE ADD CONSTRAINT fpk_DEVICE_EXPOSURE_visit_occurrence_id FOREIGN KEY (visit_occurrence_id) REFERENCES ${cdm_5_4_schema}.VISIT_OCCURRENCE (VISIT_OCCURRENCE_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.DEVICE_EXPOSURE ADD CONSTRAINT fpk_DEVICE_EXPOSURE_visit_detail_id FOREIGN KEY (visit_detail_id) REFERENCES ${cdm_5_4_schema}.VISIT_DETAIL (VISIT_DETAIL_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.MEASUREMENT ADD CONSTRAINT fpk_MEASUREMENT_person_id FOREIGN KEY (person_id) REFERENCES ${cdm_5_4_schema}.PERSON (PERSON_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.MEASUREMENT ADD CONSTRAINT fpk_MEASUREMENT_provider_id FOREIGN KEY (provider_id) REFERENCES ${cdm_5_4_schema}.PROVIDER (PROVIDER_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.MEASUREMENT ADD CONSTRAINT fpk_MEASUREMENT_visit_occurrence_id FOREIGN KEY (visit_occurrence_id) REFERENCES ${cdm_5_4_schema}.VISIT_OCCURRENCE (VISIT_OCCURRENCE_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.MEASUREMENT ADD CONSTRAINT fpk_MEASUREMENT_visit_detail_id FOREIGN KEY (visit_detail_id) REFERENCES ${cdm_5_4_schema}.VISIT_DETAIL (VISIT_DETAIL_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.OBSERVATION ADD CONSTRAINT fpk_OBSERVATION_person_id FOREIGN KEY (person_id) REFERENCES ${cdm_5_4_schema}.PERSON (PERSON_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.OBSERVATION ADD CONSTRAINT fpk_OBSERVATION_provider_id FOREIGN KEY (provider_id) REFERENCES ${cdm_5_4_schema}.PROVIDER (PROVIDER_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.OBSERVATION ADD CONSTRAINT fpk_OBSERVATION_visit_occurrence_id FOREIGN KEY (visit_occurrence_id) REFERENCES ${cdm_5_4_schema}.VISIT_OCCURRENCE (VISIT_OCCURRENCE_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.OBSERVATION ADD CONSTRAINT fpk_OBSERVATION_visit_detail_id FOREIGN KEY (visit_detail_id) REFERENCES ${cdm_5_4_schema}.VISIT_DETAIL (VISIT_DETAIL_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.DEATH ADD CONSTRAINT fpk_DEATH_person_id FOREIGN KEY (person_id) REFERENCES ${cdm_5_4_schema}.PERSON (PERSON_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.NOTE ADD CONSTRAINT fpk_NOTE_person_id FOREIGN KEY (person_id) REFERENCES ${cdm_5_4_schema}.PERSON (PERSON_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.NOTE ADD CONSTRAINT fpk_NOTE_provider_id FOREIGN KEY (provider_id) REFERENCES ${cdm_5_4_schema}.PROVIDER (PROVIDER_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.NOTE ADD CONSTRAINT fpk_NOTE_visit_occurrence_id FOREIGN KEY (visit_occurrence_id) REFERENCES ${cdm_5_4_schema}.VISIT_OCCURRENCE (VISIT_OCCURRENCE_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.NOTE ADD CONSTRAINT fpk_NOTE_visit_detail_id FOREIGN KEY (visit_detail_id) REFERENCES ${cdm_5_4_schema}.VISIT_DETAIL (VISIT_DETAIL_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.SPECIMEN ADD CONSTRAINT fpk_SPECIMEN_person_id FOREIGN KEY (person_id) REFERENCES ${cdm_5_4_schema}.PERSON (PERSON_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.CARE_SITE ADD CONSTRAINT fpk_CARE_SITE_location_id FOREIGN KEY (location_id) REFERENCES ${cdm_5_4_schema}.LOCATION (LOCATION_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.PROVIDER ADD CONSTRAINT fpk_PROVIDER_care_site_id FOREIGN KEY (care_site_id) REFERENCES ${cdm_5_4_schema}.CARE_SITE (CARE_SITE_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.PAYER_PLAN_PERIOD ADD CONSTRAINT fpk_PAYER_PLAN_PERIOD_payer_plan_period_id FOREIGN KEY (payer_plan_period_id) REFERENCES ${cdm_5_4_schema}.PERSON (PERSON_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.PAYER_PLAN_PERIOD ADD CONSTRAINT fpk_PAYER_PLAN_PERIOD_person_id FOREIGN KEY (person_id) REFERENCES ${cdm_5_4_schema}.PERSON (PERSON_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.PAYER_PLAN_PERIOD ADD CONSTRAINT fpk_PAYER_PLAN_PERIOD_payer_concept_id FOREIGN KEY (payer_concept_id) REFERENCES ${cdm_5_4_schema}.CONCEPT (CONCEPT_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.DRUG_ERA ADD CONSTRAINT fpk_DRUG_ERA_person_id FOREIGN KEY (person_id) REFERENCES ${cdm_5_4_schema}.PERSON (PERSON_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.DOSE_ERA ADD CONSTRAINT fpk_DOSE_ERA_person_id FOREIGN KEY (person_id) REFERENCES ${cdm_5_4_schema}.PERSON (PERSON_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.CONDITION_ERA ADD CONSTRAINT fpk_CONDITION_ERA_person_id FOREIGN KEY (person_id) REFERENCES ${cdm_5_4_schema}.PERSON (PERSON_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.EPISODE ADD CONSTRAINT fpk_EPISODE_person_id FOREIGN KEY (person_id) REFERENCES ${cdm_5_4_schema}.PERSON (PERSON_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.EPISODE_EVENT ADD CONSTRAINT fpk_EPISODE_EVENT_episode_id FOREIGN KEY (episode_id) REFERENCES ${cdm_5_4_schema}.EPISODE (EPISODE_ID);
+
+ALTER TABLE ${cdm_5_4_schema}.CONCEPT_RELATIONSHIP ADD CONSTRAINT fpk_CONCEPT_RELATIONSHIP_relationship_id FOREIGN KEY (relationship_id) REFERENCES ${cdm_5_4_schema}.RELATIONSHIP (RELATIONSHIP_ID);
+
+
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>T</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>800</xloc>
+      <yloc>96</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - Create Indexes</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>--postgresql OMOP CDM Indices
+
+--  There are no unique indices created because it is assumed that the primary key constraints have been run prior to implementing indices.
+--
+
+
+--***********************
+
+--Standardized clinical data
+
+--***********************
+
+CREATE INDEX idx_person_id  ON ${cdm_5_4_schema}.person  (person_id ASC);
+
+CREATE INDEX idx_gender ON ${cdm_5_4_schema}.person (gender_concept_id ASC);
+
+CREATE INDEX idx_observation_period_id_1  ON ${cdm_5_4_schema}.observation_period  (person_id ASC);
+
+
+CREATE INDEX idx_visit_person_id_1  ON ${cdm_5_4_schema}.visit_occurrence  (person_id ASC);
+CREATE INDEX idx_visit_concept_id_1 ON ${cdm_5_4_schema}.visit_occurrence (visit_concept_id ASC);
+
+CREATE INDEX idx_visit_det_person_id_1  ON ${cdm_5_4_schema}.visit_detail  (person_id ASC);
+CREATE INDEX idx_visit_det_concept_id_1 ON ${cdm_5_4_schema}.visit_detail (visit_detail_concept_id ASC);
+CREATE INDEX idx_visit_det_occ_id ON ${cdm_5_4_schema}.visit_detail (visit_occurrence_id ASC);
+
+CREATE INDEX idx_condition_person_id_1  ON ${cdm_5_4_schema}.condition_occurrence  (person_id ASC);
+CREATE INDEX idx_condition_concept_id_1 ON ${cdm_5_4_schema}.condition_occurrence (condition_concept_id ASC);
+CREATE INDEX idx_condition_visit_id_1 ON ${cdm_5_4_schema}.condition_occurrence (visit_occurrence_id ASC);
+
+CREATE INDEX idx_drug_person_id_1  ON ${cdm_5_4_schema}.drug_exposure  (person_id ASC);
+CREATE INDEX idx_drug_concept_id_1 ON ${cdm_5_4_schema}.drug_exposure (drug_concept_id ASC);
+CREATE INDEX idx_drug_visit_id_1 ON ${cdm_5_4_schema}.drug_exposure (visit_occurrence_id ASC);
+
+CREATE INDEX idx_procedure_person_id_1  ON ${cdm_5_4_schema}.procedure_occurrence  (person_id ASC);
+CREATE INDEX idx_procedure_concept_id_1 ON ${cdm_5_4_schema}.procedure_occurrence (procedure_concept_id ASC);
+CREATE INDEX idx_procedure_visit_id_1 ON ${cdm_5_4_schema}.procedure_occurrence (visit_occurrence_id ASC);
+
+CREATE INDEX idx_device_person_id_1  ON ${cdm_5_4_schema}.device_exposure  (person_id ASC);
+CREATE INDEX idx_device_concept_id_1 ON ${cdm_5_4_schema}.device_exposure (device_concept_id ASC);
+CREATE INDEX idx_device_visit_id_1 ON ${cdm_5_4_schema}.device_exposure (visit_occurrence_id ASC);
+
+CREATE INDEX idx_measurement_person_id_1  ON ${cdm_5_4_schema}.measurement  (person_id ASC);
+CREATE INDEX idx_measurement_concept_id_1 ON ${cdm_5_4_schema}.measurement (measurement_concept_id ASC);
+CREATE INDEX idx_measurement_visit_id_1 ON ${cdm_5_4_schema}.measurement (visit_occurrence_id ASC);
+
+CREATE INDEX idx_observation_person_id_1  ON ${cdm_5_4_schema}.observation  (person_id ASC);
+CREATE INDEX idx_observation_concept_id_1 ON ${cdm_5_4_schema}.observation (observation_concept_id ASC);
+CREATE INDEX idx_observation_visit_id_1 ON ${cdm_5_4_schema}.observation (visit_occurrence_id ASC);
+
+CREATE INDEX idx_death_person_id_1  ON ${cdm_5_4_schema}.death  (person_id ASC);
+
+CREATE INDEX idx_note_person_id_1  ON ${cdm_5_4_schema}.note  (person_id ASC);
+CREATE INDEX idx_note_concept_id_1 ON ${cdm_5_4_schema}.note (note_type_concept_id ASC);
+CREATE INDEX idx_note_visit_id_1 ON ${cdm_5_4_schema}.note (visit_occurrence_id ASC);
+
+CREATE INDEX idx_note_nlp_note_id_1  ON ${cdm_5_4_schema}.note_nlp  (note_id ASC);
+CREATE INDEX idx_note_nlp_concept_id_1 ON ${cdm_5_4_schema}.note_nlp (note_nlp_concept_id ASC);
+
+CREATE INDEX idx_specimen_person_id_1  ON ${cdm_5_4_schema}.specimen  (person_id ASC);
+CREATE INDEX idx_specimen_concept_id_1 ON ${cdm_5_4_schema}.specimen (specimen_concept_id ASC);
+
+CREATE INDEX idx_fact_relationship_id1 ON ${cdm_5_4_schema}.fact_relationship (domain_concept_id_1 ASC);
+CREATE INDEX idx_fact_relationship_id2 ON ${cdm_5_4_schema}.fact_relationship (domain_concept_id_2 ASC);
+CREATE INDEX idx_fact_relationship_id3 ON ${cdm_5_4_schema}.fact_relationship (relationship_concept_id ASC);
+
+--***********************
+
+--Standardized health system data
+
+--***********************
+
+CREATE INDEX idx_location_id_1  ON ${cdm_5_4_schema}.location  (location_id ASC);
+
+CREATE INDEX idx_care_site_id_1  ON ${cdm_5_4_schema}.care_site  (care_site_id ASC);
+
+CREATE INDEX idx_provider_id_1  ON ${cdm_5_4_schema}.provider  (provider_id ASC);
+
+--***********************
+
+--Standardized health economics
+
+--***********************
+
+CREATE INDEX idx_period_person_id_1  ON ${cdm_5_4_schema}.payer_plan_period  (person_id ASC);
+
+CREATE INDEX idx_cost_event_id  ON ${cdm_5_4_schema}.cost (cost_event_id ASC);
+
+--***********************
+
+--Standardized derived elements
+
+--***********************
+
+CREATE INDEX idx_drug_era_person_id_1  ON ${cdm_5_4_schema}.drug_era  (person_id ASC);
+CREATE INDEX idx_drug_era_concept_id_1 ON ${cdm_5_4_schema}.drug_era (drug_concept_id ASC);
+
+CREATE INDEX idx_dose_era_person_id_1  ON ${cdm_5_4_schema}.dose_era  (person_id ASC);
+CREATE INDEX idx_dose_era_concept_id_1 ON ${cdm_5_4_schema}.dose_era (drug_concept_id ASC);
+
+CREATE INDEX idx_condition_era_person_id_1  ON ${cdm_5_4_schema}.condition_era  (person_id ASC);
+CREATE INDEX idx_condition_era_concept_id_1 ON ${cdm_5_4_schema}.condition_era (condition_concept_id ASC);
+
+--*************************
+
+--Standardized meta-data
+
+--***********************
+
+CREATE INDEX idx_metadata_concept_id_1  ON ${cdm_5_4_schema}.metadata  (metadata_concept_id ASC);
+
+
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>T</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>1088</xloc>
+      <yloc>96</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>SQL - Create PKs</name>
+      <description/>
+      <type>SQL</type>
+      <attributes/>
+      <sql>--postgresql CDM Primary Key Constraints for OMOP Common Data Model 5.4
+
+ALTER TABLE ${cdm_5_4_schema}.PERSON ADD CONSTRAINT xpk_PERSON PRIMARY KEY (person_id);
+
+ALTER TABLE ${cdm_5_4_schema}.OBSERVATION_PERIOD ADD CONSTRAINT xpk_OBSERVATION_PERIOD PRIMARY KEY (observation_period_id);
+
+ALTER TABLE ${cdm_5_4_schema}.VISIT_OCCURRENCE ADD CONSTRAINT xpk_VISIT_OCCURRENCE PRIMARY KEY (visit_occurrence_id);
+
+ALTER TABLE ${cdm_5_4_schema}.VISIT_DETAIL ADD CONSTRAINT xpk_VISIT_DETAIL PRIMARY KEY (visit_detail_id);
+
+ALTER TABLE ${cdm_5_4_schema}.CONDITION_OCCURRENCE ADD CONSTRAINT xpk_CONDITION_OCCURRENCE PRIMARY KEY (condition_occurrence_id);
+
+ALTER TABLE ${cdm_5_4_schema}.DRUG_EXPOSURE ADD CONSTRAINT xpk_DRUG_EXPOSURE PRIMARY KEY (drug_exposure_id);
+
+ALTER TABLE ${cdm_5_4_schema}.PROCEDURE_OCCURRENCE ADD CONSTRAINT xpk_PROCEDURE_OCCURRENCE PRIMARY KEY (procedure_occurrence_id);
+
+ALTER TABLE ${cdm_5_4_schema}.DEVICE_EXPOSURE ADD CONSTRAINT xpk_DEVICE_EXPOSURE PRIMARY KEY (device_exposure_id);
+
+ALTER TABLE ${cdm_5_4_schema}.MEASUREMENT ADD CONSTRAINT xpk_MEASUREMENT PRIMARY KEY (measurement_id);
+
+ALTER TABLE ${cdm_5_4_schema}.OBSERVATION ADD CONSTRAINT xpk_OBSERVATION PRIMARY KEY (observation_id);
+
+ALTER TABLE ${cdm_5_4_schema}.NOTE ADD CONSTRAINT xpk_NOTE PRIMARY KEY (note_id);
+
+ALTER TABLE ${cdm_5_4_schema}.NOTE_NLP ADD CONSTRAINT xpk_NOTE_NLP PRIMARY KEY (note_nlp_id);
+
+ALTER TABLE ${cdm_5_4_schema}.SPECIMEN ADD CONSTRAINT xpk_SPECIMEN PRIMARY KEY (specimen_id);
+
+ALTER TABLE ${cdm_5_4_schema}.LOCATION ADD CONSTRAINT xpk_LOCATION PRIMARY KEY (location_id);
+
+ALTER TABLE ${cdm_5_4_schema}.CARE_SITE ADD CONSTRAINT xpk_CARE_SITE PRIMARY KEY (care_site_id);
+
+ALTER TABLE ${cdm_5_4_schema}.PROVIDER ADD CONSTRAINT xpk_PROVIDER PRIMARY KEY (provider_id);
+
+ALTER TABLE ${cdm_5_4_schema}.PAYER_PLAN_PERIOD ADD CONSTRAINT xpk_PAYER_PLAN_PERIOD PRIMARY KEY (payer_plan_period_id);
+
+ALTER TABLE ${cdm_5_4_schema}.COST ADD CONSTRAINT xpk_COST PRIMARY KEY (cost_id);
+
+ALTER TABLE ${cdm_5_4_schema}.DRUG_ERA ADD CONSTRAINT xpk_DRUG_ERA PRIMARY KEY (drug_era_id);
+
+ALTER TABLE ${cdm_5_4_schema}.DOSE_ERA ADD CONSTRAINT xpk_DOSE_ERA PRIMARY KEY (dose_era_id);
+
+ALTER TABLE ${cdm_5_4_schema}.CONDITION_ERA ADD CONSTRAINT xpk_CONDITION_ERA PRIMARY KEY (condition_era_id);
+
+ALTER TABLE ${cdm_5_4_schema}.EPISODE ADD CONSTRAINT xpk_EPISODE PRIMARY KEY (episode_id);
+
+ALTER TABLE ${cdm_5_4_schema}.METADATA ADD CONSTRAINT xpk_METADATA PRIMARY KEY (metadata_id);
+
+ALTER TABLE ${cdm_5_4_schema}.CONCEPT ADD CONSTRAINT xpk_CONCEPT PRIMARY KEY (concept_id);
+
+ALTER TABLE ${cdm_5_4_schema}.VOCABULARY ADD CONSTRAINT xpk_VOCABULARY PRIMARY KEY (vocabulary_id);
+
+ALTER TABLE ${cdm_5_4_schema}.DOMAIN ADD CONSTRAINT xpk_DOMAIN PRIMARY KEY (domain_id);
+
+ALTER TABLE ${cdm_5_4_schema}.CONCEPT_CLASS ADD CONSTRAINT xpk_CONCEPT_CLASS PRIMARY KEY (concept_class_id);
+
+ALTER TABLE ${cdm_5_4_schema}.RELATIONSHIP ADD CONSTRAINT xpk_RELATIONSHIP PRIMARY KEY (relationship_id);
+</sql>
+      <useVariableSubstitution>T</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>T</sendOneStatement>
+      <connection>IDSR Synthetic</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>592</xloc>
+      <yloc>96</yloc>
+      <attributes_kjc/>
+    </entry>
+    <entry>
+      <name>Success</name>
+      <description/>
+      <type>SUCCESS</type>
+      <attributes/>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>1088</xloc>
+      <yloc>240</yloc>
+      <attributes_kjc/>
+    </entry>
+  </entries>
+  <hops>
+    <hop>
+      <from>Start</from>
+      <to>Set variables</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - Create Constraints</from>
+      <to>SQL - Create Indexes</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Set variables</from>
+      <to>SQL - Create PKs</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - Create PKs</from>
+      <to>SQL - Create Constraints</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>SQL - Create Indexes</from>
+      <to>Success</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+  </hops>
+  <notepads>
+  </notepads>
+  <attributes/>
+</job>
