@@ -1,4 +1,4 @@
-The purpose of updating the source and CDM dataset from v3.0 to v3.1 is to make the daeaset ready for vaccine effectiveness analysis by making the following changes:
+The purpose of updating the source and CDM dataset from v3.0 to v3.1 is to make the dataset ready for vaccine effectiveness analysis by making the following changes:
 
 (1) Vaccine -> drug_exposure, drug_era, dose_era: Here 12 different COVID-19 vaccines were added in the source dataset that were migrated into 11 Athena standard concepts in the CDM
 
